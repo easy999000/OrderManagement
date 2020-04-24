@@ -1,0 +1,95 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        div {
+        margin-top:2px;
+        margin-bottom:2px;
+        padding-top:2px;
+        padding-bottom:2px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            用户列表: <a target="_blank" href="@Url.Action("index","Account")">用户列表 </a>
+            <div>
+                添加用户: <div>
+                    <form target="_blank" method="post" action="@Url.Action("AddAccount","account",new {area="authority" })">
+                        
+                        <label>Account:<input type="text" name="Account" /></label>
+                        <label>Pass:<input type="text" name="Pass" /></label>
+                        <label>Name:<input type="text" name="Name" /></label>
+                        <input type="submit" value="添加" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div style="height:1px;width:100%;background-color:forestgreen"></div>
+        <div>
+            角色列表: <a target="_blank" href="@Url.Action("index","Role")">角色列表</a>
+            <div>
+                添加角色: <div>
+                    <form target="_blank" method="post" action="@Url.Action("AddRole","Role",new {area="authority" })">
+                        <label>RoleName:<input type="text" name="RoleName" /></label>
+                        <label>Description:<input type="text" name="Description" /></label>
+                        <input type="submit" value="添加" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div style="height:1px;width:100%;background-color:forestgreen"></div>
+        <div>
+            基础权限: <a target="_blank" href="@Url.Action("index","PermissionBase")">基础权限</a>
+            @*<div>
+                添加用户: <div>
+                    <form target="_blank" method="post" action="@Url.Action("AddRole","account",new {area="authority" })">
+                        <label>用户id:<input type="text" name="AccountId" /></label>
+                        <label>角色id:<input type="text" name="RoleId" /></label>
+                        <input type="submit" value="添加" />
+                    </form>
+                </div>
+            </div>*@
+        </div>
+        <div style="height:1px;width:100%;background-color:forestgreen"></div>
+        <div>
+            用户关联角色: <div>
+                <form target="_blank" method="post" action="@Url.Action("RelatedRole","account",new {area="authority" })">
+                    <label>用户id:<input type="text" name="AccountId" /></label>
+                    <label>角色id:<input type="text" name="RoleId" /></label>
+                    <input type="submit" value="添加" />
+                </form>
+            </div>
+        </div>
+        <div style="height:1px;width:100%;background-color:forestgreen"></div>
+        <div>
+            角色关联权限: <div>
+                <form target="_blank" method="post" action="@Url.Action("RelatedPerBase","Role",new {area="authority" })">
+                    <label>权限id:<input type="text" name="BaseId" /></label>
+                    <label>角色id:<input type="text" name="RoleId" /></label>
+                    <input type="submit" value="添加" />
+                </form>
+            </div>
+        </div>
+        <div style="height:1px;width:100%;background-color:forestgreen"></div>
+        <div>
+            权限测试页面: <div>
+                <a target="_blank" href="@Url.Action("a1","test1",new {area="test" })">a1 </a><br />
+                <a target="_blank" href="@Url.Action("a2","test1",new {area="test" })">a2 </a><br />
+                <a target="_blank" href="@Url.Action("a3","test1",new {area="test" })">a3 </a><br />
+                <a target="_blank" href="@Url.Action("a4","test1",new {area="test" })">a4 </a><br />
+            </div>
+        </div>
+        <div style="height:1px;width:100%;background-color:forestgreen"></div>
+    </div>
+</body>
+</html>

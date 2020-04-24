@@ -1,0 +1,9 @@
+D:\zhaopeng\code\OrderManagement\OrderManagementModel\bin\Release\netcoreapp3.1\OrderManagementModel.deps.json
+D:\zhaopeng\code\OrderManagement\OrderManagementModel\bin\Release\netcoreapp3.1\OrderManagementModel.dll
+D:\zhaopeng\code\OrderManagement\OrderManagementModel\bin\Release\netcoreapp3.1\OrderManagementModel.pdb
+D:\zhaopeng\code\OrderManagement\OrderManagementModel\obj\Release\netcoreapp3.1\OrderManagementModel.csprojAssemblyReference.cache
+D:\zhaopeng\code\OrderManagement\OrderManagementModel\obj\Release\netcoreapp3.1\OrderManagementModel.csproj.CoreCompileInputs.cache
+D:\zhaopeng\code\OrderManagement\OrderManagementModel\obj\Release\netcoreapp3.1\OrderManagementModel.AssemblyInfoInputs.cache
+D:\zhaopeng\code\OrderManagement\OrderManagementModel\obj\Release\netcoreapp3.1\OrderManagementModel.AssemblyInfo.cs
+D:\zhaopeng\code\OrderManagement\OrderManagementModel\obj\Release\netcoreapp3.1\OrderManagementModel.dll
+D:\zhaopeng\code\OrderManagement\OrderManagementModel\obj\Release\netcoreapp3.1\OrderManagementModel.pdb

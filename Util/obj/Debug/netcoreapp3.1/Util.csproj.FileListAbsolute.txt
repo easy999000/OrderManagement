@@ -1,0 +1,9 @@
+D:\zhaopeng\code\OrderManagement\Util\bin\Debug\netcoreapp3.1\Util.deps.json
+D:\zhaopeng\code\OrderManagement\Util\bin\Debug\netcoreapp3.1\Util.dll
+D:\zhaopeng\code\OrderManagement\Util\bin\Debug\netcoreapp3.1\Util.pdb
+D:\zhaopeng\code\OrderManagement\Util\obj\Debug\netcoreapp3.1\Util.csproj.CoreCompileInputs.cache
+D:\zhaopeng\code\OrderManagement\Util\obj\Debug\netcoreapp3.1\Util.AssemblyInfoInputs.cache
+D:\zhaopeng\code\OrderManagement\Util\obj\Debug\netcoreapp3.1\Util.AssemblyInfo.cs
+D:\zhaopeng\code\OrderManagement\Util\obj\Debug\netcoreapp3.1\Util.dll
+D:\zhaopeng\code\OrderManagement\Util\obj\Debug\netcoreapp3.1\Util.pdb
+D:\zhaopeng\code\OrderManagement\Util\obj\Debug\netcoreapp3.1\Util.csprojAssemblyReference.cache

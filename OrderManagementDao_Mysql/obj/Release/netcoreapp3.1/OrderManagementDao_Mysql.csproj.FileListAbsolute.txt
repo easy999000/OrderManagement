@@ -1,0 +1,15 @@
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\bin\Release\netcoreapp3.1\OrderManagementDao_Mysql.deps.json
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\bin\Release\netcoreapp3.1\OrderManagementDao_Mysql.runtimeconfig.json
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\bin\Release\netcoreapp3.1\OrderManagementDao_Mysql.runtimeconfig.dev.json
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\bin\Release\netcoreapp3.1\OrderManagementDao_Mysql.dll
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\bin\Release\netcoreapp3.1\OrderManagementDao_Mysql.pdb
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\bin\Release\netcoreapp3.1\OrderManagementModel.dll
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\bin\Release\netcoreapp3.1\OrderManagementModel.pdb
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\obj\Release\netcoreapp3.1\OrderManagementDao_Mysql.csprojAssemblyReference.cache
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\obj\Release\netcoreapp3.1\OrderManagementDao_Mysql.csproj.CoreCompileInputs.cache
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\obj\Release\netcoreapp3.1\OrderManagementDao_Mysql.AssemblyInfoInputs.cache
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\obj\Release\netcoreapp3.1\OrderManagementDao_Mysql.AssemblyInfo.cs
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\obj\Release\netcoreapp3.1\OrderManagementDao_Mysql.csproj.CopyComplete
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\obj\Release\netcoreapp3.1\OrderManagementDao_Mysql.dll
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\obj\Release\netcoreapp3.1\OrderManagementDao_Mysql.pdb
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\obj\Release\netcoreapp3.1\OrderManagementDao_Mysql.genruntimeconfig.cache

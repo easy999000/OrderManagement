@@ -1,0 +1,17 @@
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\bin\Debug\netcoreapp3.1\OrderManagementBll.deps.json
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\bin\Debug\netcoreapp3.1\OrderManagementBll.dll
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\bin\Debug\netcoreapp3.1\OrderManagementBll.pdb
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\bin\Debug\netcoreapp3.1\OrderManagementModel.dll
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\bin\Debug\netcoreapp3.1\OrderManagementModel.pdb
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\obj\Debug\netcoreapp3.1\OrderManagementBll.csprojAssemblyReference.cache
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\obj\Debug\netcoreapp3.1\OrderManagementBll.AssemblyInfoInputs.cache
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\obj\Debug\netcoreapp3.1\OrderManagementBll.AssemblyInfo.cs
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\obj\Debug\netcoreapp3.1\OrderManagementBll.csproj.CopyComplete
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\obj\Debug\netcoreapp3.1\OrderManagementBll.dll
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\obj\Debug\netcoreapp3.1\OrderManagementBll.pdb
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\bin\Debug\netcoreapp3.1\OrderManagementDao_Mysql.dll
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\bin\Debug\netcoreapp3.1\OrderManagementDao_Mysql.pdb
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\obj\Debug\netcoreapp3.1\OrderManagementBll.csproj.CoreCompileInputs.cache
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\bin\Debug\netcoreapp3.1\OrderManagementBll.runtimeconfig.json
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\bin\Debug\netcoreapp3.1\OrderManagementBll.runtimeconfig.dev.json
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\obj\Debug\netcoreapp3.1\OrderManagementBll.genruntimeconfig.cache

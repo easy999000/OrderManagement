@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0oakLrsFDdSZsJe9k7gcOAT556sj6yI4h+uyao90tFgWRXYhZ2IxY42pabPw3AXD3wYXtt1BOcEB4SBnhKme6A==",
+  "success": true,
+  "projectFilePath": "D:\\zhaopeng\\code\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zhaopeng\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
