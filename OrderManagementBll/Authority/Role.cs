@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using OrderManagementDao_Mysql;
 using OrderManagementModel;
+using OrderManagementModel.Common;
 using OrderManagementModel.DBModel.Authority;
 using System;
 using System.Collections.Generic;

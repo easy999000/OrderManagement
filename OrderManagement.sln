@@ -7,13 +7,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderManagement", "OrderMan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonWebModule", "CommonWebModule\CommonWebModule.csproj", "{0D28DAB6-9E12-4616-9DF5-AF0F3221A516}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManagementModel", "OrderManagementModel\OrderManagementModel.csproj", "{22B16CE4-D7D2-4263-B1BF-DFFFAFE6F7AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderManagementModel", "OrderManagementModel\OrderManagementModel.csproj", "{22B16CE4-D7D2-4263-B1BF-DFFFAFE6F7AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManagementBll", "OrderManagementBll\OrderManagementBll.csproj", "{F99ADF1E-3E7B-4362-84C3-E418F7BF2C58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderManagementBll", "OrderManagementBll\OrderManagementBll.csproj", "{F99ADF1E-3E7B-4362-84C3-E418F7BF2C58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManagementDao_Mysql", "OrderManagementDao_Mysql\OrderManagementDao_Mysql.csproj", "{B3B1AB88-4C4B-45C4-94D0-20DEA0E496DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderManagementDao_Mysql", "OrderManagementDao_Mysql\OrderManagementDao_Mysql.csproj", "{B3B1AB88-4C4B-45C4-94D0-20DEA0E496DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "Util\Util.csproj", "{7CBA3DD0-190F-4E31-B928-6D145A20EE9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Util", "Util\Util.csproj", "{7CBA3DD0-190F-4E31-B928-6D145A20EE9D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedisDao", "RedisDao\RedisDao.csproj", "{FEA04216-4899-4D62-AF67-1895E7F08A6C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderTest", "OrderTest\OrderTest.csproj", "{36025424-4E60-40FF-AF24-01546BB99EE1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{75DD7E8C-A279-480C-B6F6-383F0CE42CCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspWeb", "AspWeb\AspWeb.csproj", "{1C84E0D1-AB32-4600-A492-77FF45C055E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{F487D3BA-F291-46B9-84AB-7531AB8D48EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +55,26 @@ Global
 		{7CBA3DD0-190F-4E31-B928-6D145A20EE9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CBA3DD0-190F-4E31-B928-6D145A20EE9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CBA3DD0-190F-4E31-B928-6D145A20EE9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEA04216-4899-4D62-AF67-1895E7F08A6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA04216-4899-4D62-AF67-1895E7F08A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA04216-4899-4D62-AF67-1895E7F08A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA04216-4899-4D62-AF67-1895E7F08A6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36025424-4E60-40FF-AF24-01546BB99EE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36025424-4E60-40FF-AF24-01546BB99EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36025424-4E60-40FF-AF24-01546BB99EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36025424-4E60-40FF-AF24-01546BB99EE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75DD7E8C-A279-480C-B6F6-383F0CE42CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75DD7E8C-A279-480C-B6F6-383F0CE42CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75DD7E8C-A279-480C-B6F6-383F0CE42CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75DD7E8C-A279-480C-B6F6-383F0CE42CCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C84E0D1-AB32-4600-A492-77FF45C055E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C84E0D1-AB32-4600-A492-77FF45C055E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C84E0D1-AB32-4600-A492-77FF45C055E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C84E0D1-AB32-4600-A492-77FF45C055E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F487D3BA-F291-46B9-84AB-7531AB8D48EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F487D3BA-F291-46B9-84AB-7531AB8D48EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F487D3BA-F291-46B9-84AB-7531AB8D48EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F487D3BA-F291-46B9-84AB-7531AB8D48EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

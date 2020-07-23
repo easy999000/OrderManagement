@@ -31,6 +31,11 @@ namespace OrderManagementModel.DBModel.Authority
         public string Phone { get; set; }
 
         /// <summary>
+        /// 年龄
+        /// </summary>
+        public int Age { get; set; }
+
+        /// <summary>
         /// 角色关联
         /// </summary>
         public List<Authority_RelatedAccountRole> RelatedRoles { get; set; }

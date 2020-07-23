@@ -1,0 +1,13 @@
+{
+  /////版本 :dev 开发
+  //////////,cc 测试,servertest 服务器,  正式
+  //////////,Test 服务器,  正式
+  //////////,Run  正式
+  "edition": "dev",
+  "redisconn": "r-wz911aq5ebvzoo1f97pd.redis.rds.aliyuncs.com:6379,defaultDatabase=1,password=Bus01#dwjwlxs",
+  "appsetting": {
+    "name": "zp",
+    "age": 10
+  }
+
+}

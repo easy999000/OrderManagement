@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using OrderManagementModel;
+using OrderManagementModel.Common;
 
 namespace OrderManagement.Areas.Authority.Controllers
 {
@@ -20,8 +21,13 @@ namespace OrderManagement.Areas.Authority.Controllers
         public List<OrderManagementModel.DBModel.Authority.Authority_Account> Index()
         {
             OrderManagementBll.Authority.Account AccountBll = new OrderManagementBll.Authority.Account(Configuration);
+             
 
-            return AccountBll.GetAccountList();
+
+            return AccountBll.GetAccountList(); 
+
+
+
         }
         public HQResult<string> RelatedRole(int AccountId, int RoleId)
         {

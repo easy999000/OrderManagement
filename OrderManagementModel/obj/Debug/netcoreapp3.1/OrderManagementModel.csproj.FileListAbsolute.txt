@@ -6,3 +6,7 @@ D:\zhaopeng\code\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\Or
 D:\zhaopeng\code\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\OrderManagementModel.dll
 D:\zhaopeng\code\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\OrderManagementModel.pdb
 D:\zhaopeng\code\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\OrderManagementModel.csproj.CoreCompileInputs.cache
+D:\zhaopeng\code\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\OrderManagementModel.csprojAssemblyReference.cache
+D:\zhaopeng\code\OrderManagement\OrderManagementModel\bin\Debug\netcoreapp3.1\Util.dll
+D:\zhaopeng\code\OrderManagement\OrderManagementModel\bin\Debug\netcoreapp3.1\Util.pdb
+D:\zhaopeng\code\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\OrderManagementModel.csproj.CopyComplete

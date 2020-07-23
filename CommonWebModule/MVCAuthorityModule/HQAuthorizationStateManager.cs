@@ -41,13 +41,20 @@ namespace CommonWebModule.MVCAuthorityModule
             //使用身份证创建一个证件当事人，
             var identityPrincipal = new ClaimsPrincipal(identity);
 
+            ////过安检
+            //_Context.HttpContext.SignInAsync("Cookies", identityPrincipal);
             //过安检
-            _Context.HttpContext.SignInAsync("Cookies", identityPrincipal);
+            _Context.HttpContext.SignInAsync( identityPrincipal);
 
-            _Context.HttpContext.Session.Set<HQAuthorizationUser>(UserSessionName,HQUser);
+            //_Context.HttpContext.RequestServices.GetService
+            SessionLogin(_Context.HttpContext, HQUser);
+           
 
         }
-         
+        public static void SessionLogin(HttpContext Context, HQAuthorizationUser HQUser)
+        {
+            Context.Session.Set<HQAuthorizationUser>(UserSessionName, HQUser);
+        }
 
         /// <summary>
         /// 获取登入用户

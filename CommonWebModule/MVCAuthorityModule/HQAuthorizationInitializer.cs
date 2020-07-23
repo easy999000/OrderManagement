@@ -1,4 +1,6 @@
-﻿using CommonWebModule.MVCAuthorityModule;
+﻿
+using CommonWebModule.MVCAuthenticationModule;
+using CommonWebModule.MVCAuthorityModule;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -22,9 +24,15 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceCollection AddHQAuthorization(this IServiceCollection services,Action<HQAuthorizationConfigOption> ConfigOption=null
+        public static IServiceCollection AddHQAuthorization(this IServiceCollection services, Action<HQAuthorizationConfigOption> ConfigOption = null
             )
         {
+            //services.ConfigureExternalCookie(o =>
+            //{
+            //    o.Cookie.Domain = "easy.com";
+            //});
+
+
             HQAuthorizationConfigOption Option = new HQAuthorizationConfigOption();
 
             ConfigOption?.Invoke(Option);
@@ -32,12 +40,7 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddDistributedMemoryCache();
 
             services.AddControllersWithViews();
-            services.AddSession(options =>
-            {
-                options.IdleTimeout = TimeSpan.FromMinutes(20);
-                options.Cookie.HttpOnly = true;
-                options.Cookie.IsEssential = true;
-            });
+
 
             services.AddTransient<HQAuthorizationStateManager>();
 
@@ -48,13 +51,22 @@ namespace Microsoft.Extensions.DependencyInjection
             ///添加路由
             services.AddRouting();
 
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            // services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            services
+            .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            
             .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+
             {
-                options.AccessDeniedPath = Option. AccessDeniedPath;
+                options.AccessDeniedPath = Option.AccessDeniedPath;
                 options.LoginPath = Option.LoginPath;
                 options.LogoutPath = Option.LoginPath;
                 options.ExpireTimeSpan = new TimeSpan(0, 5, 0);
+                //options.Cookie.Domain= "zhao.cc";
+                //  options.Cookie.Name = "Authentication";
+                // options.TicketDataFormat = new HQSecureDataFormat();
+
+                //  options.Events.
 
             });
 
@@ -65,13 +77,15 @@ namespace Microsoft.Extensions.DependencyInjection
 
                 Requirement.Add(new HQAuthorizationRequirement());
 
+                ///身份验证的策略名字
                 string[] Schemes = new string[] { CookieAuthenticationDefaults.AuthenticationScheme };
+                //   , CookieAuthenticationDefaults.AuthenticationScheme
 
                 AuthorizationPolicy policy = new AuthorizationPolicy(Requirement, Schemes);
 
                 options.DefaultPolicy = policy;
                 options.FallbackPolicy = policy;
-                 
+
 
                 options.AddPolicy(Option.PolicyName, policy => policy.AddRequirements(new HQAuthorizationRequirement())
 

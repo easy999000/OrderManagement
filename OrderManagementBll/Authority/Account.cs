@@ -7,6 +7,9 @@ using System.Text;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using OrderManagementModel.DBModel.Authority;
+using OrderManagementModel.Common;
+using OrderManagementModel.DBWhere;
+using Util;
 
 namespace OrderManagementBll.Authority
 {
@@ -18,13 +21,13 @@ namespace OrderManagementBll.Authority
             Configuration = configuration;
         }
 
-        public HQResult<Authority_Account> Sigin(string UserName, string Password)
+        public HQResult<Authority_Account> Sigin(string Account, string Password)
         {
             HQResult<Authority_Account> result = new HQResult<Authority_Account>();
 
             OrderManagementDB DBcontext = new OrderManagementDB();
 
-            var user = DBcontext.Authority_Account.Where(w => w.Name == UserName && w.Pass == Password)
+            var user = DBcontext.Authority_Account.Where(w => w.Account == Account && w.Pass == Password)
                    .Include(p => p.RelatedRoles)
                    .ThenInclude(p => p.Role)
                    .ThenInclude(p => p.RelatedRoleBases)
@@ -39,6 +42,30 @@ namespace OrderManagementBll.Authority
             return result.SetResult(1, "ok", user);
         }
 
+
+        public HQResult<Authority_Account> GetAccount(string Account)
+        {
+            HQResult<Authority_Account> result = new HQResult<Authority_Account>();
+
+            OrderManagementDB DBcontext = new OrderManagementDB();
+
+            var user = DBcontext.Authority_Account.Where(w => w.Account == Account)
+                   .Include(p => p.RelatedRoles)
+                   .ThenInclude(p => p.Role)
+                   .ThenInclude(p => p.RelatedRoleBases)
+                   .ThenInclude(p => p.BasePer).FirstOrDefault();
+
+            if (user == null)
+            {
+
+                return result.SetResult(-1, null);
+            }
+
+            return result.SetResult(1, "ok", user);
+        }
+
+
+
         public List<OrderManagementModel.DBModel.Authority.Authority_Account> GetAccountList()
         {
             OrderManagementDB DBcontext = new OrderManagementDB();
@@ -47,6 +74,23 @@ namespace OrderManagementBll.Authority
 
             return vl.ToList();
         }
+
+        public List<OrderManagementModel.DBModel.Authority.Authority_Account> GetAccountWhere(AccountWhere where)
+        {
+            OrderManagementDB DBcontext = new OrderManagementDB();
+
+            //var test1 = DBcontext.Authority_Account.AsQueryable();
+            //var test2 = test1.Where(o => o.ID == 3);
+
+            //var test3 = test2.ToList();
+
+
+            var Queryable = DBcontext.Authority_Account.AsQueryable().GetWhere(new PageQueryParam<AccountWhere>(where));
+
+
+            return Queryable.ToList();
+        }
+
 
         public HQResult<string> AddAccount(string Account, string Name, string Pass)
         {

@@ -10,7 +10,7 @@
         "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj",
         "projectName": "CommonWebModule",
         "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj",
-        "packagesPath": "C:\\Users\\zhaopeng\\.nuget\\packages\\",
+        "packagesPath": "D:\\NuGetPackages\\",
         "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\CommonWebModule\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -18,19 +18,23 @@
         ],
         "configFilePaths": [
           "C:\\Users\\zhaopeng\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://172.168.16.48:8080/nuget": {},
+          "D:\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj": {
+                "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -42,6 +46,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
@@ -65,7 +73,69 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj",
+        "projectName": "Util",
+        "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj",
+        "packagesPath": "D:\\NuGetPackages\\",
+        "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zhaopeng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "D:\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

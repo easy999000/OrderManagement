@@ -1,8 +1,28 @@
 {
   "version": 2,
-  "dgSpecHash": "/8+o1Si8t3zWJgyNHWnt6PBLwJVK+2VoLG4pXU7kBaxWp0FBmNmIFf8ckEXHk/ougNwH4slVXszeb0BXUEPXuA==",
+  "dgSpecHash": "y0jaaXbVdbGeJ0aE8Y/cl0T3swSTm5JUqrYHnKMSD52KSVxbQpGs6JzoquUFxgN0lMyp81RQ5lrcOWfFPirvlQ==",
   "success": true,
   "projectFilePath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "D:\\NuGetPackages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.entityframeworkcore\\3.1.6\\microsoft.entityframeworkcore.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.entityframeworkcore.abstractions\\3.1.6\\microsoft.entityframeworkcore.abstractions.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.entityframeworkcore.analyzers\\3.1.6\\microsoft.entityframeworkcore.analyzers.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.caching.abstractions\\3.1.6\\microsoft.extensions.caching.abstractions.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.caching.memory\\3.1.6\\microsoft.extensions.caching.memory.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.configuration\\3.1.6\\microsoft.extensions.configuration.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.configuration.abstractions\\3.1.6\\microsoft.extensions.configuration.abstractions.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.configuration.binder\\3.1.6\\microsoft.extensions.configuration.binder.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.dependencyinjection\\3.1.6\\microsoft.extensions.dependencyinjection.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.6\\microsoft.extensions.dependencyinjection.abstractions.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.logging\\3.1.6\\microsoft.extensions.logging.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.logging.abstractions\\3.1.6\\microsoft.extensions.logging.abstractions.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.options\\3.1.6\\microsoft.extensions.options.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.primitives\\3.1.6\\microsoft.extensions.primitives.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
+    "D:\\NuGetPackages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "D:\\NuGetPackages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -10,7 +10,7 @@
         "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj",
         "projectName": "Util",
         "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj",
-        "packagesPath": "C:\\Users\\zhaopeng\\.nuget\\packages\\",
+        "packagesPath": "D:\\NuGetPackages\\",
         "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -18,14 +18,14 @@
         ],
         "configFilePaths": [
           "C:\\Users\\zhaopeng\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://172.168.16.48:8080/nuget": {},
+          "D:\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,6 +41,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -56,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

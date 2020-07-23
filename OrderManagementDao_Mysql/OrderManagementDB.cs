@@ -36,8 +36,10 @@ namespace OrderManagementDao_Mysql
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            ///添加mysql模块
             optionsBuilder.UseMySql(CurrentConnectionString);
+
+            
 
         }
 

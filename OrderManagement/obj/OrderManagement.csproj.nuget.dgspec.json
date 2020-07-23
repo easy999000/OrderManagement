@@ -10,7 +10,7 @@
         "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj",
         "projectName": "CommonWebModule",
         "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj",
-        "packagesPath": "C:\\Users\\zhaopeng\\.nuget\\packages\\",
+        "packagesPath": "D:\\NuGetPackages\\",
         "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\CommonWebModule\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -18,19 +18,23 @@
         ],
         "configFilePaths": [
           "C:\\Users\\zhaopeng\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://172.168.16.48:8080/nuget": {},
+          "D:\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj": {
+                "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -42,6 +46,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
@@ -65,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -75,7 +83,7 @@
         "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementBll\\OrderManagementBll.csproj",
         "projectName": "OrderManagementBll",
         "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementBll\\OrderManagementBll.csproj",
-        "packagesPath": "C:\\Users\\zhaopeng\\.nuget\\packages\\",
+        "packagesPath": "D:\\NuGetPackages\\",
         "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementBll\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -83,14 +91,14 @@
         ],
         "configFilePaths": [
           "C:\\Users\\zhaopeng\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://172.168.16.48:8080/nuget": {},
+          "D:\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -101,6 +109,12 @@
               },
               "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj": {
                 "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj"
+              },
+              "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\RedisDao.csproj": {
+                "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\RedisDao.csproj"
+              },
+              "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj": {
+                "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj"
               }
             }
           }
@@ -116,21 +130,21 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.3, )"
+              "version": "[3.1.6, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.3, )"
+              "version": "[3.1.6, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
-              "version": "[3.1.3, )"
+              "version": "[3.1.6, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
-              "version": "[3.1.3, )"
+              "version": "[3.1.6, )"
             }
           },
           "imports": [
@@ -148,7 +162,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -158,7 +172,7 @@
         "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj",
         "projectName": "OrderManagementDao_Mysql",
         "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj",
-        "packagesPath": "C:\\Users\\zhaopeng\\.nuget\\packages\\",
+        "packagesPath": "D:\\NuGetPackages\\",
         "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementDao_Mysql\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -166,14 +180,14 @@
         ],
         "configFilePaths": [
           "C:\\Users\\zhaopeng\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://172.168.16.48:8080/nuget": {},
+          "D:\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -230,7 +244,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -240,7 +254,7 @@
         "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj",
         "projectName": "OrderManagementModel",
         "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj",
-        "packagesPath": "C:\\Users\\zhaopeng\\.nuget\\packages\\",
+        "packagesPath": "D:\\NuGetPackages\\",
         "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -248,19 +262,23 @@
         ],
         "configFilePaths": [
           "C:\\Users\\zhaopeng\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://172.168.16.48:8080/nuget": {},
+          "D:\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj": {
+                "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -286,7 +304,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -296,7 +314,7 @@
         "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagement\\OrderManagement.csproj",
         "projectName": "OrderManagement",
         "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagement\\OrderManagement.csproj",
-        "packagesPath": "C:\\Users\\zhaopeng\\.nuget\\packages\\",
+        "packagesPath": "D:\\NuGetPackages\\",
         "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -304,14 +322,14 @@
         ],
         "configFilePaths": [
           "C:\\Users\\zhaopeng\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://172.168.16.48:8080/nuget": {},
+          "D:\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -328,6 +346,12 @@
               },
               "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj": {
                 "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj"
+              },
+              "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\RedisDao.csproj": {
+                "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\RedisDao.csproj"
+              },
+              "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj": {
+                "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj"
               }
             }
           }
@@ -341,29 +365,33 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[3.1.3, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.3, )"
+              "version": "[3.1.6, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.3, )"
+              "version": "[3.1.6, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.3, )"
+              "version": "[3.1.6, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
-              "version": "[3.1.3, )"
+              "version": "[3.1.6, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -388,7 +416,151 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\RedisDao.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\RedisDao.csproj",
+        "projectName": "RedisDao",
+        "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\RedisDao.csproj",
+        "packagesPath": "D:\\NuGetPackages\\",
+        "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zhaopeng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "D:\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.1.58, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "aliyun-net-sdk-r-kvstore": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj",
+        "projectName": "Util",
+        "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj",
+        "packagesPath": "D:\\NuGetPackages\\",
+        "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zhaopeng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "D:\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

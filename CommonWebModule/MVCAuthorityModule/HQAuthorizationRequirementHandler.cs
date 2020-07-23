@@ -41,6 +41,11 @@ namespace CommonWebModule.MVCAuthorityModule
                 return Task.CompletedTask;
             }
 
+            if (context.User.Identity == null || !context.User.Identity.IsAuthenticated)
+            {
+                return Task.CompletedTask;
+            }
+
             var sessionUser = _StateManager.GetLoginUser();
 
             if (sessionUser == null)
@@ -78,7 +83,7 @@ namespace CommonWebModule.MVCAuthorityModule
             int id = 1;
 
 
-            id = sessionUser.UserHQAuthorizationSign.GetHQAuthorizationSignID(sign.FullName);
+            id = sessionUser.UserHQAuthorizationSign.GetHQAuthorizationSignID(sign);
 
             if (id > 0)
             {
@@ -98,7 +103,7 @@ namespace CommonWebModule.MVCAuthorityModule
                 Action = "*"
             };
 
-            id = sessionUser.UserHQAuthorizationSign.GetHQAuthorizationSignID(sign.FullName);
+            id = sessionUser.UserHQAuthorizationSign.GetHQAuthorizationSignID(sign);
 
             if (id > 0)
             {
@@ -119,7 +124,7 @@ namespace CommonWebModule.MVCAuthorityModule
                 Action = "*"
             };
 
-            id = sessionUser.UserHQAuthorizationSign.GetHQAuthorizationSignID(sign.FullName);
+            id = sessionUser.UserHQAuthorizationSign.GetHQAuthorizationSignID(sign);
 
             if (id > 0)
             {
@@ -127,7 +132,7 @@ namespace CommonWebModule.MVCAuthorityModule
 
                 return Task.CompletedTask;
             }
-             
+
 
             Console.WriteLine("授权失败");
 

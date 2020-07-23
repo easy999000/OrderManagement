@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using OrderManagementModel;
+using OrderManagementModel.Common;
 
 namespace OrderManagement.Areas.Authority.Controllers
 {

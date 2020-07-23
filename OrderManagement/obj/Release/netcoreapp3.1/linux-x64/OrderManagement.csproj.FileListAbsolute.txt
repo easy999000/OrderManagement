@@ -122,7 +122,6 @@ D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\Microsoft.VisualBasic.Core.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\Microsoft.VisualBasic.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\Microsoft.Win32.Primitives.dll
-D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\Microsoft.Win32.Registry.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\mscorlib.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\netstandard.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.AppContext.dll
@@ -147,7 +146,6 @@ D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Diagnostics.Contracts.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Diagnostics.Debug.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Diagnostics.DiagnosticSource.dll
-D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Diagnostics.EventLog.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Diagnostics.FileVersionInfo.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Diagnostics.Process.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Diagnostics.StackTrace.dll
@@ -173,7 +171,6 @@ D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.IO.FileSystem.Watcher.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.IO.IsolatedStorage.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.IO.MemoryMappedFiles.dll
-D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.IO.Pipelines.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.IO.Pipes.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.IO.UnmanagedMemoryStream.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Linq.dll
@@ -229,19 +226,14 @@ D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Runtime.Serialization.Json.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Runtime.Serialization.Primitives.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Runtime.Serialization.Xml.dll
-D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Security.AccessControl.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Security.Claims.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Security.Cryptography.Algorithms.dll
-D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Security.Cryptography.Cng.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Security.Cryptography.Csp.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Security.Cryptography.Encoding.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Security.Cryptography.Primitives.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Security.Cryptography.X509Certificates.dll
-D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Security.Cryptography.Xml.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Security.dll
-D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Security.Permissions.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Security.Principal.dll
-D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Security.Principal.Windows.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Security.SecureString.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.ServiceModel.Web.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.ServiceProcess.dll
@@ -266,7 +258,6 @@ D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Web.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Web.HttpUtility.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Windows.dll
-D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Windows.Extensions.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Xml.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Xml.Linq.dll
 D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\refs\System.Xml.ReaderWriter.dll
@@ -412,3 +403,15 @@ D:\zhaopeng\code\OrderManagement\OrderManagement\obj\Release\netcoreapp3.1\linux
 D:\zhaopeng\code\OrderManagement\OrderManagement\obj\Release\netcoreapp3.1\linux-x64\OrderManagement.pdb
 D:\zhaopeng\code\OrderManagement\OrderManagement\obj\Release\netcoreapp3.1\linux-x64\OrderManagement.genruntimeconfig.cache
 D:\zhaopeng\code\OrderManagement\OrderManagement\obj\Release\netcoreapp3.1\linux-x64\OrderManagement.csprojAssemblyReference.cache
+D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\Pipelines.Sockets.Unofficial.dll
+D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\StackExchange.Redis.dll
+D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\System.Configuration.ConfigurationManager.dll
+D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\System.Diagnostics.PerformanceCounter.dll
+D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\System.Security.Cryptography.ProtectedData.dll
+D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\RedisDao.dll
+D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\Util.dll
+D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\RedisDao.pdb
+D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\Util.pdb
+D:\zhaopeng\code\OrderManagement\OrderManagement\obj\Release\netcoreapp3.1\linux-x64\Razor\Areas\Main\Controllers\Index.cshtml.g.cs
+D:\zhaopeng\code\OrderManagement\OrderManagement\bin\Release\netcoreapp3.1\linux-x64\config\sysConfig.json

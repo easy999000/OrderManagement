@@ -15,3 +15,7 @@ D:\zhaopeng\code\OrderManagement\OrderManagementBll\obj\Release\netcoreapp3.1\Or
 D:\zhaopeng\code\OrderManagement\OrderManagementBll\obj\Release\netcoreapp3.1\OrderManagementBll.dll
 D:\zhaopeng\code\OrderManagement\OrderManagementBll\obj\Release\netcoreapp3.1\OrderManagementBll.pdb
 D:\zhaopeng\code\OrderManagement\OrderManagementBll\obj\Release\netcoreapp3.1\OrderManagementBll.genruntimeconfig.cache
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\bin\Release\netcoreapp3.1\RedisDao.dll
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\bin\Release\netcoreapp3.1\Util.dll
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\bin\Release\netcoreapp3.1\RedisDao.pdb
+D:\zhaopeng\code\OrderManagement\OrderManagementBll\bin\Release\netcoreapp3.1\Util.pdb

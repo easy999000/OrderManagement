@@ -32,13 +32,13 @@ namespace CommonWebModule.MVCAuthorityModule
             }
         }
 
-        public int GetHQAuthorizationSignID(string FullName)
+        public int GetHQAuthorizationSignID(HQAuthorizationSign Sign)
         {
-            if (!HQAuthorizationSignDic.ContainsKey(FullName))
+            if (!HQAuthorizationSignDic.ContainsKey(Sign.FullName))
             {
                 return -1;
             }
-            return HQAuthorizationSignDic[FullName];
+            return HQAuthorizationSignDic[Sign.FullName];
         }
 
 

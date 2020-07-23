@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace OrderManagement.Areas.Test.Controllers
@@ -16,12 +17,14 @@ namespace OrderManagement.Areas.Test.Controllers
         }
         public IActionResult a1()
         {
+            this.HttpContext.Session.SetString("sessionTest", DateTime.Now.ToString());
+
             ViewData["msg"] = "a1";
             return View("Index");
         }
         public IActionResult a2()
         {
-            ViewData["msg"] = "a2";
+            ViewData["msg"] = "a2   " + this.HttpContext.Session.GetString("sessionTest");
             return View("Index");
         }
         public IActionResult a3()

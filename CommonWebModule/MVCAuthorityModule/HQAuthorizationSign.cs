@@ -82,7 +82,9 @@ namespace CommonWebModule.MVCAuthorityModule
         {
             get
             {
-                return System.IO.Path.Combine(Area, Controller, Action);
+                return System.IO.Path.Combine(Area, Controller, Action).Replace("\\", "/");
+                //return System.IO.Path.Combine(Area, Controller, Action);
+                // return System.IO.Path.(Area, Controller, Action);
             }
         }
 

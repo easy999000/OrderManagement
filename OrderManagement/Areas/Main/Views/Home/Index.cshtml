@@ -11,21 +11,22 @@
     <title>Index</title>
     <style>
         div {
-        margin-top:2px;
-        margin-bottom:2px;
-        padding-top:2px;
-        padding-bottom:2px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            padding-top: 2px;
+            padding-bottom: 2px;
         }
     </style>
 </head>
 <body>
     <div>
+        <div> <div> @Html.ActionLink("退出", "Sigout", "Authority", new { area = "Authority" }) </div></div>
         <div>
             用户列表: <a target="_blank" href="@Url.Action("index","Account")">用户列表 </a>
             <div>
                 添加用户: <div>
                     <form target="_blank" method="post" action="@Url.Action("AddAccount","account",new {area="authority" })">
-                        
+
                         <label>Account:<input type="text" name="Account" /></label>
                         <label>Pass:<input type="text" name="Pass" /></label>
                         <label>Name:<input type="text" name="Name" /></label>
@@ -51,14 +52,14 @@
         <div>
             基础权限: <a target="_blank" href="@Url.Action("index","PermissionBase")">基础权限</a>
             @*<div>
-                添加用户: <div>
-                    <form target="_blank" method="post" action="@Url.Action("AddRole","account",new {area="authority" })">
-                        <label>用户id:<input type="text" name="AccountId" /></label>
-                        <label>角色id:<input type="text" name="RoleId" /></label>
-                        <input type="submit" value="添加" />
-                    </form>
-                </div>
-            </div>*@
+                    添加用户: <div>
+                        <form target="_blank" method="post" action="@Url.Action("AddRole","account",new {area="authority" })">
+                            <label>用户id:<input type="text" name="AccountId" /></label>
+                            <label>角色id:<input type="text" name="RoleId" /></label>
+                            <input type="submit" value="添加" />
+                        </form>
+                    </div>
+                </div>*@
         </div>
         <div style="height:1px;width:100%;background-color:forestgreen"></div>
         <div>

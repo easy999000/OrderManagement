@@ -15,7 +15,6 @@ D:\zhaopeng\code\OrderManagement\CommonWebModule\bin\Debug\netcoreapp3.1\Propert
 D:\zhaopeng\code\OrderManagement\CommonWebModule\bin\Debug\netcoreapp3.1\CommonWebModule.deps.json
 D:\zhaopeng\code\OrderManagement\CommonWebModule\bin\Debug\netcoreapp3.1\CommonWebModule.dll
 D:\zhaopeng\code\OrderManagement\CommonWebModule\bin\Debug\netcoreapp3.1\CommonWebModule.pdb
-D:\zhaopeng\code\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\CommonWebModule.csproj.CoreCompileInputs.cache
 D:\zhaopeng\code\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\CommonWebModule.AssemblyInfoInputs.cache
 D:\zhaopeng\code\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\CommonWebModule.AssemblyInfo.cs
 D:\zhaopeng\code\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\CommonWebModule.RazorTargetAssemblyInfo.cache
@@ -23,4 +22,8 @@ D:\zhaopeng\code\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\staticw
 D:\zhaopeng\code\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\staticwebassets\CommonWebModule.StaticWebAssets.xml
 D:\zhaopeng\code\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\CommonWebModule.dll
 D:\zhaopeng\code\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\CommonWebModule.pdb
+D:\zhaopeng\code\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\CommonWebModule.csproj.CoreCompileInputs.cache
 D:\zhaopeng\code\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\CommonWebModule.csprojAssemblyReference.cache
+D:\zhaopeng\code\OrderManagement\CommonWebModule\bin\Debug\netcoreapp3.1\Util.dll
+D:\zhaopeng\code\OrderManagement\CommonWebModule\bin\Debug\netcoreapp3.1\Util.pdb
+D:\zhaopeng\code\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\CommonWebModule.csproj.CopyComplete

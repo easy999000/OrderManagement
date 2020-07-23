@@ -13,3 +13,5 @@ D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\bin\Debug\netcoreapp3.
 D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\bin\Debug\netcoreapp3.1\OrderManagementModel.pdb
 D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\obj\Debug\netcoreapp3.1\OrderManagementDao_Mysql.csproj.CopyComplete
 D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\obj\Debug\netcoreapp3.1\OrderManagementDao_Mysql.csproj.CoreCompileInputs.cache
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\bin\Debug\netcoreapp3.1\Util.dll
+D:\zhaopeng\code\OrderManagement\OrderManagementDao_Mysql\bin\Debug\netcoreapp3.1\Util.pdb

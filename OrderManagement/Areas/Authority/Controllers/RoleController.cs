@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using OrderManagementModel;
+using OrderManagementModel.Common;
 
 namespace OrderManagement.Areas.Authority.Controllers
 {

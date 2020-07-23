@@ -1,0 +1,35 @@
+@*
+    ////-----------------------------------------------------------------------
+    //// <copyright file="Index.cshtml" company="Fluent.Infrastructure">
+    ////     Copyright © Fluent.Infrastructure. All rights reserved.
+    ////
+    //// </copyright>
+    ////-----------------------------------------------------------------------
+    /// This is a test file created by Fluent Infrastructure in order to
+    /// illustrate its operation.
+    /// See more at: https://github.com/dn32/Fluent.Infrastructure/wiki
+    ////-----------------------------------------------------------------------
+*@
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <form method="post" action="@Url.Action("Login")">
+        <div>
+            <div>
+                <label>用户名:<input type="text" name="model.UserName" placeholder="账号" /></label>
+            </div>
+            <div>
+                <label>密码:<input type="password" name="model.Password" placeholder="密码" /></label>
+            </div>
+            <div>@ViewData["msg"]</div>
+            <div> <a>注册</a><input type="submit" value="登入" /> </div>
+        </div>
+    </form>
+
+    @Html.ActionLink("Forum", "New", "Forum")
+</div>
