@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Debug;
 using OrderManagementModel.DBModel.Authority;
 using System;
 using System.Collections.Generic;
@@ -20,6 +22,13 @@ namespace OrderManagementDao_Mysql
         string CurrentConnectionString;
 
         public static string ConnectionString;
+
+
+        [Obsolete]
+        public static readonly LoggerFactory LoggerFactory = new LoggerFactory(new[] { new DebugLoggerProvider() });
+
+
+
         ///// <summary>
         ///// 连接字符串配置名字
         ///// </summary>
@@ -36,6 +45,8 @@ namespace OrderManagementDao_Mysql
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseLoggerFactory(LoggerFactory);
             ///添加mysql模块
             optionsBuilder.UseMySql(CurrentConnectionString);
 

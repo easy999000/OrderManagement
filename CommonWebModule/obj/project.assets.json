@@ -1322,11 +1322,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj",
+      "projectUniqueName": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj",
       "projectName": "CommonWebModule",
-      "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj",
+      "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj",
       "packagesPath": "D:\\NuGetPackages\\",
-      "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\CommonWebModule\\obj\\",
+      "outputPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\CommonWebModule\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1346,8 +1346,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj": {
-              "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj"
+            "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj": {
+              "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj"
             }
           }
         }

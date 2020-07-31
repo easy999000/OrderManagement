@@ -10,3 +10,15 @@ D:\zhaopeng\code\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\Or
 D:\zhaopeng\code\OrderManagement\OrderManagementModel\bin\Debug\netcoreapp3.1\Util.dll
 D:\zhaopeng\code\OrderManagement\OrderManagementModel\bin\Debug\netcoreapp3.1\Util.pdb
 D:\zhaopeng\code\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\OrderManagementModel.csproj.CopyComplete
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagementModel\bin\Debug\netcoreapp3.1\OrderManagementModel.deps.json
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagementModel\bin\Debug\netcoreapp3.1\OrderManagementModel.dll
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagementModel\bin\Debug\netcoreapp3.1\OrderManagementModel.pdb
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagementModel\bin\Debug\netcoreapp3.1\Util.dll
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagementModel\bin\Debug\netcoreapp3.1\Util.pdb
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\OrderManagementModel.csprojAssemblyReference.cache
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\OrderManagementModel.AssemblyInfoInputs.cache
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\OrderManagementModel.AssemblyInfo.cs
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\OrderManagementModel.csproj.CoreCompileInputs.cache
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\OrderManagementModel.csproj.CopyComplete
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\OrderManagementModel.dll
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagementModel\obj\Debug\netcoreapp3.1\OrderManagementModel.pdb

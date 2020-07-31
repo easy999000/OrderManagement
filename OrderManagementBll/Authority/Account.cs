@@ -79,10 +79,19 @@ namespace OrderManagementBll.Authority
         {
             OrderManagementDB DBcontext = new OrderManagementDB();
 
-            //var test1 = DBcontext.Authority_Account.AsQueryable();
-            //var test2 = test1.Where(o => o.ID == 3);
+            //List<int> ids = new List<int>();
+            //ids.Add(1);
+            //ids.Add(2);
+            //ids.Add(3);
+            //ids.Add(4);
+            //ids.Add(5);
 
-            //var test3 = test2.ToList();
+            //int[] idarray =  new int[] { 1, 3, 5, 7, 9 };
+
+            //var test1 = DBcontext.Authority_Account.AsQueryable();
+            //var test2 = test1.Where(o => idarray.Contains(o.ID));
+
+            //var v3= test2.ToList();
 
 
             var Queryable = DBcontext.Authority_Account.AsQueryable().GetWhere(new PageQueryParam<AccountWhere>(where));

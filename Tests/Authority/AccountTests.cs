@@ -28,7 +28,9 @@ namespace OrderManagementBll.Authority.Tests
             //where.Age_Min = 2;
             //where.Age_Max = 20;
             //where.Name = "33";
-            where.Phone = "15940";
+            //where.Phone = "15940";
+            //where.IDs = new int[] { 1, 3, 5, 7, 9 };
+            where.NoIDs = new int[] { 1, 3, 5, 7, 9 };
 
 
             var v1 = AccountBll.GetAccountWhere(where);

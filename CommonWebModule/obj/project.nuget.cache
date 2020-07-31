@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OhCxy0RLoKRiMSY1jzOPOdnpdBBKRUWwNUHBSTGFrh6BscdMQ+Pa75cmkN4+XMUd+79cov/EqlN7t+OtFApEcg==",
+  "dgSpecHash": "cA9Q5gyAVO8/WkbPfLhHbfKbjGTAobKJyk7I4gCst+hjBw6b6WKgARVwFUjQrHvBfMhiDZvYYWlvlDbPsmeqGA==",
   "success": true,
-  "projectFilePath": "D:\\zhaopeng\\code\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj",
+  "projectFilePath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj",
   "expectedPackageFiles": [
     "D:\\NuGetPackages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "D:\\NuGetPackages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

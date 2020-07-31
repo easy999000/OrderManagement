@@ -1,17 +1,141 @@
 {
   "format": 1,
   "restore": {
-    "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementBll\\OrderManagementBll.csproj": {}
+    "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementBll\\OrderManagementBll.csproj": {}
   },
   "projects": {
-    "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementBll\\OrderManagementBll.csproj": {
+    "D:\\zhaopeng\\code\\BeetleX.Redis\\src\\BeetleX.Redis.csproj": {
+      "version": "0.9.7.9",
+      "restore": {
+        "projectUniqueName": "D:\\zhaopeng\\code\\BeetleX.Redis\\src\\BeetleX.Redis.csproj",
+        "projectName": "BeetleX.Redis",
+        "projectPath": "D:\\zhaopeng\\code\\BeetleX.Redis\\src\\BeetleX.Redis.csproj",
+        "packagesPath": "D:\\NuGetPackages\\",
+        "outputPath": "D:\\zhaopeng\\code\\BeetleX.Redis\\src\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zhaopeng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1",
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "D:\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          },
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "BeetleX": {
+              "target": "Package",
+              "version": "[1.5.1.7, )"
+            },
+            "MessagePack": {
+              "target": "Package",
+              "version": "[2.1.115, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "SpanJson": {
+              "target": "Package",
+              "version": "[2.0.7, )"
+            },
+            "protobuf-net": {
+              "target": "Package",
+              "version": "[2.4.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        },
+        "netcoreapp3.1": {
+          "dependencies": {
+            "BeetleX": {
+              "target": "Package",
+              "version": "[1.5.1.7, )"
+            },
+            "MessagePack": {
+              "target": "Package",
+              "version": "[2.1.115, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "SpanJson": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "protobuf-net": {
+              "target": "Package",
+              "version": "[2.4.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementBll\\OrderManagementBll.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementBll\\OrderManagementBll.csproj",
+        "projectUniqueName": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementBll\\OrderManagementBll.csproj",
         "projectName": "OrderManagementBll",
-        "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementBll\\OrderManagementBll.csproj",
+        "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementBll\\OrderManagementBll.csproj",
         "packagesPath": "D:\\NuGetPackages\\",
-        "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementBll\\obj\\",
+        "outputPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementBll\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,17 +155,17 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj": {
-                "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj"
+              "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj": {
+                "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj"
               },
-              "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj": {
-                "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj"
+              "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj": {
+                "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj"
               },
-              "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\RedisDao.csproj": {
-                "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\RedisDao.csproj"
+              "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\RedisDao\\RedisDao.csproj": {
+                "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\RedisDao\\RedisDao.csproj"
               },
-              "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj": {
-                "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj"
+              "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj": {
+                "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj"
               }
             }
           }
@@ -93,14 +217,14 @@
         }
       }
     },
-    "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj": {
+    "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj",
+        "projectUniqueName": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj",
         "projectName": "OrderManagementDao_Mysql",
-        "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj",
+        "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj",
         "packagesPath": "D:\\NuGetPackages\\",
-        "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementDao_Mysql\\obj\\",
+        "outputPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementDao_Mysql\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -120,8 +244,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj": {
-                "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj"
+              "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj": {
+                "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj"
               }
             }
           }
@@ -151,6 +275,10 @@
               "target": "Package",
               "version": "[3.1.3, )"
             },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[3.1.1, )"
@@ -175,14 +303,14 @@
         }
       }
     },
-    "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj": {
+    "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj",
+        "projectUniqueName": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj",
         "projectName": "OrderManagementModel",
-        "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj",
+        "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj",
         "packagesPath": "D:\\NuGetPackages\\",
-        "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\obj\\",
+        "outputPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -202,8 +330,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj": {
-                "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj"
+              "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj": {
+                "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj"
               }
             }
           }
@@ -235,14 +363,14 @@
         }
       }
     },
-    "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\RedisDao.csproj": {
+    "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\RedisDao\\RedisDao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\RedisDao.csproj",
+        "projectUniqueName": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\RedisDao\\RedisDao.csproj",
         "projectName": "RedisDao",
-        "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\RedisDao.csproj",
+        "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\RedisDao\\RedisDao.csproj",
         "packagesPath": "D:\\NuGetPackages\\",
-        "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\obj\\",
+        "outputPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\RedisDao\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -261,7 +389,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\zhaopeng\\code\\BeetleX.Redis\\src\\BeetleX.Redis.csproj": {
+                "projectPath": "D:\\zhaopeng\\code\\BeetleX.Redis\\src\\BeetleX.Redis.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -273,6 +405,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "CSRedisCore": {
+              "target": "Package",
+              "version": "[3.6.5, )"
+            },
             "Microsoft.AspNetCore.Http.Abstractions": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -292,10 +428,6 @@
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
               "version": "[4.7.0, )"
-            },
-            "aliyun-net-sdk-r-kvstore": {
-              "target": "Package",
-              "version": "[2.4.0, )"
             }
           },
           "imports": [
@@ -317,14 +449,14 @@
         }
       }
     },
-    "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj": {
+    "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj",
+        "projectUniqueName": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj",
         "projectName": "Util",
-        "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj",
+        "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj",
         "packagesPath": "D:\\NuGetPackages\\",
-        "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\obj\\",
+        "outputPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

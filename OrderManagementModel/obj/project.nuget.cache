@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AdnrYtMBfKRYmWMxhC411ReGWcZQaRhMqy7vfr8NIVHjmKyenD4Wu59oA/4dXyuif4CMl3KY2uT9BoRySIHjEg==",
+  "dgSpecHash": "UVAX0n3Dfmybmcnws67WMjtDj7ABss20IDqualWraPOdmwFo0up5IGqlOwvzl2Y/ezdq5iDrBZudVHGzWITDkw==",
   "success": true,
-  "projectFilePath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj",
+  "projectFilePath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj",
   "expectedPackageFiles": [
     "D:\\NuGetPackages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "D:\\NuGetPackages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

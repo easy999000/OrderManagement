@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nc3GE9n+8sjjOOw15u4QlN9Naj69ZZkOvfErQDtNX7LfhDOfGzizlUy0sRizQlhRQxlKYUn22ZzqRZGJdyNzcw==",
+  "dgSpecHash": "CWT+Skpc3YzQuE0BYJL3BCR24OqDOzS1/s11zCO+yCrKUJJ2aZL7Y4PUTwNG2Khd8CsKb+8+ABmDIyNbGAGEww==",
   "success": true,
-  "projectFilePath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj",
+  "projectFilePath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
@@ -24,6 +24,7 @@
     "D:\\NuGetPackages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.6\\microsoft.extensions.dependencyinjection.abstractions.3.1.6.nupkg.sha512",
     "D:\\NuGetPackages\\microsoft.extensions.logging\\3.1.6\\microsoft.extensions.logging.3.1.6.nupkg.sha512",
     "D:\\NuGetPackages\\microsoft.extensions.logging.abstractions\\3.1.6\\microsoft.extensions.logging.abstractions.3.1.6.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.logging.debug\\3.1.6\\microsoft.extensions.logging.debug.3.1.6.nupkg.sha512",
     "D:\\NuGetPackages\\microsoft.extensions.options\\3.1.6\\microsoft.extensions.options.3.1.6.nupkg.sha512",
     "D:\\NuGetPackages\\microsoft.extensions.primitives\\3.1.6\\microsoft.extensions.primitives.3.1.6.nupkg.sha512",
     "D:\\NuGetPackages\\mysqlconnector\\0.61.0\\mysqlconnector.0.61.0.nupkg.sha512",

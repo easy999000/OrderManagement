@@ -53,5 +53,9 @@ namespace Util
         ///// 11留空,先不要用.
         ///// </summary>
         //EqualOr = 11
+        /// <summary>
+        /// In
+        /// </summary>
+        NotIn = 12,
     }
 }

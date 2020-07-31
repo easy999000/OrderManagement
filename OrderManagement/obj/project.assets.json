@@ -2,26 +2,53 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "aliyun-net-sdk-core/1.5.6": {
+      "BeetleX/1.5.1.7": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/aliyun-net-sdk-core.dll": {}
+          "lib/netcoreapp2.1/BeetleX.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/aliyun-net-sdk-core.dll": {}
+          "lib/netcoreapp2.1/BeetleX.dll": {}
         }
       },
-      "aliyun-net-sdk-r-kvstore/2.4.0": {
+      "CSRedisCore/3.6.5": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "9.0.1",
-          "aliyun-net-sdk-core": "1.5.6"
+          "Newtonsoft.Json": "12.0.3",
+          "System.ValueTuple": "4.5.0"
         },
         "compile": {
-          "lib/netstandard2.0/aliyun-net-sdk-r-kvstore.dll": {}
+          "lib/netstandard2.0/CSRedisCore.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/aliyun-net-sdk-r-kvstore.dll": {}
+          "lib/netstandard2.0/CSRedisCore.dll": {}
+        }
+      },
+      "MessagePack/2.1.115": {
+        "type": "package",
+        "dependencies": {
+          "MessagePack.Annotations": "2.1.115",
+          "Microsoft.Bcl.AsyncInterfaces": "1.0.0",
+          "System.Memory": "4.5.3",
+          "System.Reflection.Emit": "4.6.0",
+          "System.Reflection.Emit.Lightweight": "4.6.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
+          "System.Threading.Tasks.Extensions": "4.5.3"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/MessagePack.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/MessagePack.dll": {}
+        }
+      },
+      "MessagePack.Annotations/2.1.115": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MessagePack.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MessagePack.Annotations.dll": {}
         }
       },
       "Microsoft.AspNetCore.Cors/2.2.0": {
@@ -652,6 +679,18 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
+      "Microsoft.Extensions.Logging.Debug/3.1.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "3.1.6"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Logging.Debug.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Logging.Debug.dll": {}
+        }
+      },
       "Microsoft.Extensions.Options/3.1.6": {
         "type": "package",
         "dependencies": {
@@ -983,6 +1022,18 @@
           "lib/netstandard2.0/Pomelo.JsonObject.dll": {}
         }
       },
+      "protobuf-net/2.4.6": {
+        "type": "package",
+        "dependencies": {
+          "System.ServiceModel.Primitives": "4.5.3"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/protobuf-net.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/protobuf-net.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -1152,6 +1203,18 @@
             "assetType": "native",
             "rid": "ubuntu.16.10-x64"
           }
+        }
+      },
+      "SpanJson/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.6.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/SpanJson.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/SpanJson.dll": {}
         }
       },
       "StackExchange.Redis/2.1.58": {
@@ -1755,6 +1818,27 @@
           "lib/netstandard1.3/System.ObjectModel.dll": {}
         }
       },
+      "System.Private.ServiceModel/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.0",
+          "System.Reflection.DispatchProxy": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard2.0/System.Private.ServiceModel.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard2.0/System.Private.ServiceModel.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Reflection/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1768,20 +1852,22 @@
           "ref/netstandard1.5/System.Reflection.dll": {}
         }
       },
-      "System.Reflection.Emit/4.3.0": {
+      "System.Reflection.DispatchProxy/4.5.0": {
         "type": "package",
-        "dependencies": {
-          "System.IO": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netstandard1.1/_._": {}
+          "ref/netstandard2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/System.Reflection.Emit.dll": {}
+          "lib/netcoreapp2.0/System.Reflection.DispatchProxy.dll": {}
+        }
+      },
+      "System.Reflection.Emit/4.6.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
@@ -1798,19 +1884,13 @@
           "lib/netstandard1.3/System.Reflection.Emit.ILGeneration.dll": {}
         }
       },
-      "System.Reflection.Emit.Lightweight/4.3.0": {
+      "System.Reflection.Emit.Lightweight/4.6.0": {
         "type": "package",
-        "dependencies": {
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Reflection.Extensions/4.3.0": {
@@ -2252,6 +2332,20 @@
           }
         }
       },
+      "System.ServiceModel.Primitives/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.ServiceModel": "4.5.3"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.ServiceModel.Primitives.dll": {},
+          "ref/netstandard2.0/System.ServiceModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.ServiceModel.Primitives.dll": {},
+          "lib/netstandard2.0/System.ServiceModel.dll": {}
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2377,6 +2471,15 @@
           "ref/netstandard1.2/System.Threading.Timer.dll": {}
         }
       },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
       "System.Windows.Extensions/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -2444,6 +2547,23 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "BeetleX.Redis/0.9.7.9": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "BeetleX": "1.5.1.7",
+          "MessagePack": "2.1.115",
+          "Newtonsoft.Json": "12.0.3",
+          "SpanJson": "3.0.1",
+          "protobuf-net": "2.4.6"
+        },
+        "compile": {
+          "bin/placeholder/BeetleX.Redis.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BeetleX.Redis.dll": {}
+        }
+      },
       "CommonWebModule/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -2486,6 +2606,7 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Logging.Debug": "3.1.6",
           "OrderManagementModel": "1.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "3.1.1"
         },
@@ -2513,12 +2634,13 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "BeetleX.Redis": "0.9.7.9",
+          "CSRedisCore": "3.6.5",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.3",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3",
           "StackExchange.Redis": "2.1.58",
-          "System.Configuration.ConfigurationManager": "4.7.0",
-          "aliyun-net-sdk-r-kvstore": "2.4.0"
+          "System.Configuration.ConfigurationManager": "4.7.0"
         },
         "compile": {
           "bin/placeholder/RedisDao.dll": {}
@@ -2543,30 +2665,65 @@
     }
   },
   "libraries": {
-    "aliyun-net-sdk-core/1.5.6": {
-      "sha512": "xajhO8+9QsRoa3AmyfjYu1P0CfANHoyPjD6k6oPR3QcogexpaAPtlXPKWgjB3Nio0fWIH4wpbzDuqvGN5PgqdA==",
+    "BeetleX/1.5.1.7": {
+      "sha512": "n6eEUFxOH0N8ptk711YY9EE0kWxHSwmuPVYFjgemiWAX7xwlYmp4yuYl3oUOxbtHHNbMmOj8lOsEJbmrwFy/yA==",
       "type": "package",
-      "path": "aliyun-net-sdk-core/1.5.6",
+      "path": "beetlex/1.5.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "aliyun-net-sdk-core.1.5.6.nupkg.sha512",
-        "aliyun-net-sdk-core.nuspec",
-        "lib/net45/aliyun-net-sdk-core.dll",
-        "lib/netstandard2.0/aliyun-net-sdk-core.dll"
+        "beetlex.1.5.1.7.nupkg.sha512",
+        "beetlex.nuspec",
+        "beetlex200.png",
+        "lib/netcoreapp2.1/BeetleX.dll",
+        "lib/netstandard2.0/BeetleX.dll"
       ]
     },
-    "aliyun-net-sdk-r-kvstore/2.4.0": {
-      "sha512": "+2chlg+ZnPPFPH+dUtZCOTtovJYvcqWSpIspkQadzczaR8q3Pxb9N5+LqsrDqx7kMxWQn2mKMCTgwmaf2HXv/g==",
+    "CSRedisCore/3.6.5": {
+      "sha512": "leAH+nG/WalDKiQFy1aCbUzNimvguRUvOnC8TwwcgoxeAonF7oWv0ilUpJ1ntqtRmLZhRWSO+we8yf0xm4Q/7A==",
       "type": "package",
-      "path": "aliyun-net-sdk-r-kvstore/2.4.0",
+      "path": "csrediscore/3.6.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "aliyun-net-sdk-r-kvstore.2.4.0.nupkg.sha512",
-        "aliyun-net-sdk-r-kvstore.nuspec",
-        "lib/net45/aliyun-net-sdk-r-kvstore.dll",
-        "lib/netstandard2.0/aliyun-net-sdk-r-kvstore.dll"
+        "csrediscore.3.6.5.nupkg.sha512",
+        "csrediscore.nuspec",
+        "lib/net40/CSRedisCore.dll",
+        "lib/net40/CSRedisCore.xml",
+        "lib/net45/CSRedisCore.dll",
+        "lib/net45/CSRedisCore.xml",
+        "lib/netstandard2.0/CSRedisCore.dll",
+        "lib/netstandard2.0/CSRedisCore.xml"
+      ]
+    },
+    "MessagePack/2.1.115": {
+      "sha512": "QLLsIPUSoS7j1b/1qf5EXhl6bMMDlYu8iqVO+yim+xtehE1lhAGhIkK/hdGwNT5M2niK1uJTuof29K7XGSHMWA==",
+      "type": "package",
+      "path": "messagepack/2.1.115",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netcoreapp2.1/MessagePack.dll",
+        "lib/netcoreapp2.1/MessagePack.xml",
+        "lib/netstandard2.0/MessagePack.dll",
+        "lib/netstandard2.0/MessagePack.xml",
+        "messagepack.2.1.115.nupkg.sha512",
+        "messagepack.nuspec"
+      ]
+    },
+    "MessagePack.Annotations/2.1.115": {
+      "sha512": "AZu+lE3/lImOpK0wnUwWWSds6YZCm7zX3ooViuezYJRRp9TIy+d1MgZPMEsyE+WL2Vt8IwP8GjsJI9soBiZ5zw==",
+      "type": "package",
+      "path": "messagepack.annotations/2.1.115",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/MessagePack.Annotations.dll",
+        "lib/netstandard2.0/MessagePack.Annotations.xml",
+        "messagepack.annotations.2.1.115.nupkg.sha512",
+        "messagepack.annotations.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Cors/2.2.0": {
@@ -3310,6 +3467,22 @@
         "microsoft.extensions.logging.abstractions.nuspec"
       ]
     },
+    "Microsoft.Extensions.Logging.Debug/3.1.6": {
+      "sha512": "7XFX/O8TxYQL2moddqBybzsCjfWbxGB1vzlhBN9AbPFJDqGaxUd0amLjbmYNcv8oKzjVjp4SuqtkLAFmEekZmQ==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.debug/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Logging.Debug.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Logging.Debug.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Debug.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Debug.xml",
+        "microsoft.extensions.logging.debug.3.1.6.nupkg.sha512",
+        "microsoft.extensions.logging.debug.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Options/3.1.6": {
       "sha512": "6nBkdL9UxCfA8eDuFBZVYAYpJhux0a6R7y58KcYnqKEYF84X9cK1uJQ9a+VWEWGXujMa4fnCGoVdKNYhANqbZg==",
       "type": "package",
@@ -4043,6 +4216,34 @@
         "pomelo.jsonobject.nuspec"
       ]
     },
+    "protobuf-net/2.4.6": {
+      "sha512": "fDYwwGw9yCERTkIzxhmiGmD3i5nB5Pw4roZ9Pi+MPNbNiNbGAA9mVrSSbTjAMNQEBXtwK/HZ6btrO2YwYsVsMw==",
+      "type": "package",
+      "path": "protobuf-net/2.4.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/protobuf-net.dll",
+        "lib/net20/protobuf-net.xml",
+        "lib/net35/protobuf-net.dll",
+        "lib/net35/protobuf-net.xml",
+        "lib/net40/protobuf-net.dll",
+        "lib/net40/protobuf-net.xml",
+        "lib/netcoreapp2.1/protobuf-net.dll",
+        "lib/netcoreapp2.1/protobuf-net.xml",
+        "lib/netstandard1.0/protobuf-net.dll",
+        "lib/netstandard1.0/protobuf-net.xml",
+        "lib/netstandard1.3/protobuf-net.dll",
+        "lib/netstandard1.3/protobuf-net.xml",
+        "lib/netstandard2.0/protobuf-net.dll",
+        "lib/netstandard2.0/protobuf-net.xml",
+        "lib/uap10.0/protobuf-net.dll",
+        "lib/uap10.0/protobuf-net.pri",
+        "lib/uap10.0/protobuf-net.xml",
+        "protobuf-net.2.4.6.nupkg.sha512",
+        "protobuf-net.nuspec"
+      ]
+    },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "sha512": "HdSSp5MnJSsg08KMfZThpuLPJpPwE5hBXvHwoKWosyHHfe8Mh5WKT0ylEOf6yNzX6Ngjxe4Whkafh5q7Ymac4Q==",
       "type": "package",
@@ -4250,6 +4451,20 @@
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
+      ]
+    },
+    "SpanJson/3.0.1": {
+      "sha512": "l7Je3GvUtpyrb9DDgAnMJtTVceShYLD8MlS8tKmcKSprI1HEW0A9kbj3Gp2l6pTyZeBCz2Hxz/8/qQlbyAXtFA==",
+      "type": "package",
+      "path": "spanjson/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/SpanJson.dll",
+        "lib/netcoreapp3.0/SpanJson.pdb",
+        "lib/netcoreapp3.0/SpanJson.xml",
+        "spanjson.3.0.1.nupkg.sha512",
+        "spanjson.nuspec"
       ]
     },
     "StackExchange.Redis/2.1.58": {
@@ -5946,6 +6161,27 @@
         "system.objectmodel.nuspec"
       ]
     },
+    "System.Private.ServiceModel/4.5.3": {
+      "sha512": "ancrQgJagx+yC4SZbuE+eShiEAUIF0E1d21TRSoy1C/rTwafAVcBr/fKibkq5TQzyy9uNil2tx2/iaUxsy0S9g==",
+      "type": "package",
+      "path": "system.private.servicemodel/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "ref/netstandard/_._",
+        "runtimes/unix/lib/netstandard1.3/System.Private.ServiceModel.dll",
+        "runtimes/unix/lib/netstandard2.0/System.Private.ServiceModel.dll",
+        "runtimes/win/lib/netcore50/System.Private.ServiceModel.dll",
+        "runtimes/win/lib/netstandard1.3/System.Private.ServiceModel.dll",
+        "runtimes/win/lib/netstandard2.0/System.Private.ServiceModel.dll",
+        "runtimes/win/lib/uap10.0.16300/System.Private.ServiceModel.dll",
+        "system.private.servicemodel.4.5.3.nupkg.sha512",
+        "system.private.servicemodel.nuspec",
+        "version.txt"
+      ]
+    },
     "System.Reflection/4.3.0": {
       "sha512": "KMiAFoW7MfJGa9nDFNcfu+FpEdiHpWgTcS2HdMpDvt9saK3y/G4GwprPyzqjFH9NTaGPQeWNHU+iDlDILj96aQ==",
       "type": "package",
@@ -6027,26 +6263,80 @@
         "system.reflection.nuspec"
       ]
     },
-    "System.Reflection.Emit/4.3.0": {
-      "sha512": "228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg==",
+    "System.Reflection.DispatchProxy/4.5.0": {
+      "sha512": "+UW1hq11TNSeb+16rIk8hRQ02o339NFyzMc4ma/FqmxBzM30l1c2IherBB4ld1MNcenS48fz8tbt50OW4rVULA==",
       "type": "package",
-      "path": "system.reflection.emit/4.3.0",
+      "path": "system.reflection.dispatchproxy/4.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
-        "lib/monotouch10/_._",
-        "lib/net45/_._",
-        "lib/netcore50/System.Reflection.Emit.dll",
-        "lib/netstandard1.3/System.Reflection.Emit.dll",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Reflection.DispatchProxy.dll",
+        "lib/netcoreapp2.0/System.Reflection.DispatchProxy.dll",
+        "lib/netstandard1.3/System.Reflection.DispatchProxy.dll",
+        "lib/netstandard2.0/System.Reflection.DispatchProxy.dll",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
         "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netstandard1.3/System.Reflection.DispatchProxy.dll",
+        "ref/netstandard1.3/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/de/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/es/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/fr/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/it/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/ja/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/ko/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/ru/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/zh-hans/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/zh-hant/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard2.0/System.Reflection.DispatchProxy.dll",
+        "ref/netstandard2.0/System.Reflection.DispatchProxy.xml",
+        "ref/uap10.0.16299/System.Reflection.DispatchProxy.dll",
+        "ref/uap10.0.16299/System.Reflection.DispatchProxy.xml",
+        "ref/uap10.0.16300/System.Reflection.DispatchProxy.dll",
+        "ref/uap10.0.16300/System.Reflection.DispatchProxy.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Reflection.DispatchProxy.dll",
+        "runtimes/win-aot/lib/uap10.0.16299/System.Reflection.DispatchProxy.dll",
+        "runtimes/win/lib/uap10.0.16299/System.Reflection.DispatchProxy.dll",
+        "system.reflection.dispatchproxy.4.5.0.nupkg.sha512",
+        "system.reflection.dispatchproxy.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Reflection.Emit/4.6.0": {
+      "sha512": "qAo4jyXtC9i71iElngX7P2r+zLaiHzxKwf66sc3X91tL5Ks6fnQ1vxL04o7ZSm3sYfLExySL7GN8aTpNYpU1qw==",
+      "type": "package",
+      "path": "system.reflection.emit/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/monoandroid10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Reflection.Emit.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Reflection.Emit.dll",
+        "lib/netstandard1.1/System.Reflection.Emit.xml",
+        "lib/netstandard1.3/System.Reflection.Emit.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.xml",
+        "lib/netstandard2.1/_._",
+        "lib/xamarinmac20/_._",
+        "ref/monoandroid10/_._",
         "ref/net45/_._",
+        "ref/netcoreapp2.0/_._",
         "ref/netstandard1.1/System.Reflection.Emit.dll",
         "ref/netstandard1.1/System.Reflection.Emit.xml",
         "ref/netstandard1.1/de/System.Reflection.Emit.xml",
@@ -6058,9 +6348,16 @@
         "ref/netstandard1.1/ru/System.Reflection.Emit.xml",
         "ref/netstandard1.1/zh-hans/System.Reflection.Emit.xml",
         "ref/netstandard1.1/zh-hant/System.Reflection.Emit.xml",
+        "ref/netstandard2.0/System.Reflection.Emit.dll",
+        "ref/netstandard2.0/System.Reflection.Emit.xml",
+        "ref/netstandard2.1/_._",
         "ref/xamarinmac20/_._",
-        "system.reflection.emit.4.3.0.nupkg.sha512",
-        "system.reflection.emit.nuspec"
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.dll",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.xml",
+        "system.reflection.emit.4.6.0.nupkg.sha512",
+        "system.reflection.emit.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Reflection.Emit.ILGeneration/4.3.0": {
@@ -6107,19 +6404,26 @@
         "system.reflection.emit.ilgeneration.nuspec"
       ]
     },
-    "System.Reflection.Emit.Lightweight/4.3.0": {
-      "sha512": "oadVHGSMsTmZsAF864QYN1t1QzZjIcuKU3l2S9cZOwDdDueNTrqq1yRj7koFfIGEnKpt6NjpL3rOzRhs4ryOgA==",
+    "System.Reflection.Emit.Lightweight/4.6.0": {
+      "sha512": "j/V5HVvxvBQ7uubYD0PptQW2KGsi1Pc2kZ9yfwLixv3ADdjL/4M78KyC5e+ymW612DY8ZE4PFoZmWpoNmN2mqg==",
       "type": "package",
-      "path": "system.reflection.emit.lightweight/4.3.0",
+      "path": "system.reflection.emit.lightweight/4.6.0",
       "files": [
         ".nupkg.metadata",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
         "lib/netcore50/System.Reflection.Emit.Lightweight.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Reflection.Emit.Lightweight.dll",
+        "lib/netstandard1.0/System.Reflection.Emit.Lightweight.xml",
         "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.Lightweight.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.Lightweight.xml",
+        "lib/netstandard2.1/_._",
         "lib/portable-net45+wp8/_._",
         "lib/wp80/_._",
         "lib/xamarinios10/_._",
@@ -6129,6 +6433,7 @@
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net45/_._",
+        "ref/netcoreapp2.0/_._",
         "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll",
         "ref/netstandard1.0/System.Reflection.Emit.Lightweight.xml",
         "ref/netstandard1.0/de/System.Reflection.Emit.Lightweight.xml",
@@ -6140,15 +6445,21 @@
         "ref/netstandard1.0/ru/System.Reflection.Emit.Lightweight.xml",
         "ref/netstandard1.0/zh-hans/System.Reflection.Emit.Lightweight.xml",
         "ref/netstandard1.0/zh-hant/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard2.0/System.Reflection.Emit.Lightweight.dll",
+        "ref/netstandard2.0/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard2.1/_._",
         "ref/portable-net45+wp8/_._",
         "ref/wp80/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "runtimes/aot/lib/netcore50/_._",
-        "system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
-        "system.reflection.emit.lightweight.nuspec"
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.Lightweight.dll",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.Lightweight.xml",
+        "system.reflection.emit.lightweight.4.6.0.nupkg.sha512",
+        "system.reflection.emit.lightweight.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Reflection.Extensions/4.3.0": {
@@ -7230,6 +7541,58 @@
         "version.txt"
       ]
     },
+    "System.ServiceModel.Primitives/4.5.3": {
+      "sha512": "Wc9Hgg4Cmqi416zvEgq2sW1YYCGuhwWzspDclJWlFZqY6EGhFUPZU+kVpl5z9kAgrSOQP7/Uiik+PtSQtmq+5A==",
+      "type": "package",
+      "path": "system.servicemodel.primitives/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net46/System.ServiceModel.Primitives.dll",
+        "lib/net461/System.ServiceModel.Primitives.dll",
+        "lib/netcore50/System.ServiceModel.Primitives.dll",
+        "lib/netstandard1.3/System.ServiceModel.Primitives.dll",
+        "lib/netstandard2.0/System.ServiceModel.Primitives.dll",
+        "lib/netstandard2.0/System.ServiceModel.dll",
+        "lib/portable-net45+win8+wp8/_._",
+        "lib/uap10.0.16300/System.ServiceModel.Primitives.dll",
+        "lib/uap10.0.16300/System.ServiceModel.dll",
+        "lib/win8/_._",
+        "lib/wp8/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net46/System.ServiceModel.Primitives.dll",
+        "ref/net461/System.ServiceModel.Primitives.dll",
+        "ref/netcore50/System.ServiceModel.Primitives.dll",
+        "ref/netstandard1.0/System.ServiceModel.Primitives.dll",
+        "ref/netstandard1.1/System.ServiceModel.Primitives.dll",
+        "ref/netstandard1.3/System.ServiceModel.Primitives.dll",
+        "ref/netstandard2.0/System.ServiceModel.Primitives.dll",
+        "ref/netstandard2.0/System.ServiceModel.dll",
+        "ref/portable-net45+win8+wp8/_._",
+        "ref/uap10.0.16300/System.ServiceModel.Primitives.dll",
+        "ref/uap10.0.16300/System.ServiceModel.dll",
+        "ref/win8/_._",
+        "ref/wp8/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.servicemodel.primitives.4.5.3.nupkg.sha512",
+        "system.servicemodel.primitives.nuspec",
+        "version.txt"
+      ]
+    },
     "System.Text.Encoding/4.3.0": {
       "sha512": "BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "type": "package",
@@ -7777,6 +8140,50 @@
         "system.threading.timer.nuspec"
       ]
     },
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Windows.Extensions/4.7.0": {
       "sha512": "CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "type": "package",
@@ -7940,6 +8347,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "BeetleX.Redis/0.9.7.9": {
+      "type": "project",
+      "path": "../../../BeetleX.Redis/src/BeetleX.Redis.csproj",
+      "msbuildProject": "../../../BeetleX.Redis/src/BeetleX.Redis.csproj"
+    },
     "CommonWebModule/1.0.0": {
       "type": "project",
       "path": "../CommonWebModule/CommonWebModule.csproj",
@@ -7995,11 +8407,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagement\\OrderManagement.csproj",
+      "projectUniqueName": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagement\\OrderManagement.csproj",
       "projectName": "OrderManagement",
-      "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagement\\OrderManagement.csproj",
+      "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagement\\OrderManagement.csproj",
       "packagesPath": "D:\\NuGetPackages\\",
-      "outputPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagement\\obj\\",
+      "outputPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8019,23 +8431,23 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\zhaopeng\\code\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj": {
-              "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj"
+            "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj": {
+              "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\CommonWebModule\\CommonWebModule.csproj"
             },
-            "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementBll\\OrderManagementBll.csproj": {
-              "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementBll\\OrderManagementBll.csproj"
+            "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementBll\\OrderManagementBll.csproj": {
+              "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementBll\\OrderManagementBll.csproj"
             },
-            "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj": {
-              "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj"
+            "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj": {
+              "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj"
             },
-            "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj": {
-              "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj"
+            "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj": {
+              "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj"
             },
-            "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\RedisDao.csproj": {
-              "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\RedisDao\\RedisDao.csproj"
+            "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\RedisDao\\RedisDao.csproj": {
+              "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\RedisDao\\RedisDao.csproj"
             },
-            "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj": {
-              "projectPath": "D:\\zhaopeng\\code\\OrderManagement\\Util\\Util.csproj"
+            "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj": {
+              "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj"
             }
           }
         }

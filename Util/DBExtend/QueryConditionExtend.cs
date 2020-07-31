@@ -148,6 +148,20 @@ namespace Util
                                 );
                     break;
                 case OperatorType.In:
+                    mainExpression = GetMethodCallExpression_In(sourceDB
+                                , QueryParam, TSourceDBProp
+                                , QueryTypePropertyInfo, QueryParamAttr
+                                , TSourceProp, QueryParamFieldValue
+                                , FunParam
+                                );
+                    break;
+                case OperatorType.NotIn:
+                    mainExpression = GetMethodCallExpression_NotIn(sourceDB
+                                , QueryParam, TSourceDBProp
+                                , QueryTypePropertyInfo, QueryParamAttr
+                                , TSourceProp, QueryParamFieldValue
+                                , FunParam
+                                );
                     break;
 
                 default:
@@ -183,7 +197,7 @@ namespace Util
             BinaryExpression mainExpression = null;
 
 
-             
+
             MemberExpression LeftProp = Expression.Property(FunParam, TSourceProp.Name);
             //System.Linq.Expressions.ParameterExpression RightProp = Expression.Parameter(QueryMemberInfo.ReflectedType);
             ConstantExpression RightProp = Expression.Constant(QueryParamFieldValue);
@@ -224,7 +238,7 @@ namespace Util
             IQueryable<TSource> sourceDB
             , PageQueryParam<TCondition> QueryParam
             , PropertyInfo[] TSourceDBProp
-            , MemberInfo QueryTypeMemberInfo
+            , PropertyInfo QueryTypeMemberInfo
             , QueryParamAttribute QueryParamAttr
             , PropertyInfo TSourceProp
             , object QueryParamFieldValue
@@ -242,7 +256,7 @@ namespace Util
 
 
             mainExpression = Expression.Call(LeftProp,
-               typeof(string).GetMethod("Contains", new Type[] { typeof(string) }),
+               TSourceProp.PropertyType.GetMethod("Contains", new Type[] { QueryTypeMemberInfo.PropertyType }),
               RightProp);
 
             return mainExpression;
@@ -253,7 +267,7 @@ namespace Util
             IQueryable<TSource> sourceDB
             , PageQueryParam<TCondition> QueryParam
             , PropertyInfo[] TSourceDBProp
-            , MemberInfo QueryTypeMemberInfo
+            , PropertyInfo QueryTypeMemberInfo
             , QueryParamAttribute QueryParamAttr
             , PropertyInfo TSourceProp
             , object QueryParamFieldValue
@@ -266,13 +280,7 @@ namespace Util
             MemberExpression LeftProp = Expression.Property(FunParam, TSourceProp.Name);
             var itemParameter = Expression.Parameter(typeof(TSource), "item");
             var functions = Expression.Property(null, typeof(EF).GetProperty(nameof(EF.Functions)));
-            var like = typeof(DbFunctionsExtensions).GetMethod(nameof(DbFunctionsExtensions.Like), new Type[] { functions.Type, typeof(string), typeof(string) });
-            //Expression expressionProperty = Expression.Property(itemParameter, TSourceProp.Name);
-
-            //if (TSourceProp.PropertyType != typeof(string))
-            //{
-            //    expressionProperty = Expression.Call(expressionProperty, typeof(object).GetMethod(nameof(object.ToString), new Type[0]));
-            //}
+            var like = typeof(DbFunctionsExtensions).GetMethod(nameof(DbFunctionsExtensions.Like), new Type[] { functions.Type, TSourceProp.PropertyType, QueryTypeMemberInfo.PropertyType });
 
 
             mainExpression = Expression.Call(
@@ -281,6 +289,85 @@ namespace Util
                        functions,
                        LeftProp,
                        Expression.Constant(QueryParamFieldValue));
+
+            return mainExpression;
+
+
+        }
+        public static MethodCallExpression GetMethodCallExpression_In<TSource, TCondition>(
+            IQueryable<TSource> sourceDB
+            , PageQueryParam<TCondition> QueryParam
+            , PropertyInfo[] TSourceDBProp
+            , PropertyInfo QueryTypeMemberInfo
+            , QueryParamAttribute QueryParamAttr
+            , PropertyInfo TSourceProp
+            , object QueryParamFieldValue
+            , ParameterExpression FunParam
+            )
+        {
+            //var Fun = typeof(Enumerable).GetMethod("Contains", new Type[] { typeof(IEnumerable<int>), typeof(int) });
+
+
+            MethodCallExpression mainExpression = null;
+
+
+            MemberExpression LeftProp = Expression.Property(FunParam, TSourceProp.Name);
+            var itemParameter = Expression.Parameter(typeof(TSource), "item");
+            var functions = Expression.Property(null, typeof(EF).GetProperty(nameof(EF.Functions)));
+
+            //var like = typeof(Enumerable).GetMethod("Contains", new Type[] { functions.Type, TSourceProp.PropertyType, QueryTypeMemberInfo.PropertyType });
+
+
+            var FunGeneric = typeof(Enumerable).GetMethods().First(o => o.Name == "Contains" && o.GetParameters().Length == 2);
+
+            var Fun = FunGeneric.MakeGenericMethod(TSourceProp.PropertyType);
+
+            mainExpression = Expression.Call(
+                       null,
+                       Fun,
+                       Expression.Constant(QueryParamFieldValue),
+                       LeftProp);
+
+
+            return mainExpression;
+
+
+        }
+        public static Expression GetMethodCallExpression_NotIn<TSource, TCondition>(
+            IQueryable<TSource> sourceDB
+            , PageQueryParam<TCondition> QueryParam
+            , PropertyInfo[] TSourceDBProp
+            , PropertyInfo QueryTypeMemberInfo
+            , QueryParamAttribute QueryParamAttr
+            , PropertyInfo TSourceProp
+            , object QueryParamFieldValue
+            , ParameterExpression FunParam
+            )
+        {
+            //var Fun = typeof(Enumerable).GetMethod("Contains", new Type[] { typeof(IEnumerable<int>), typeof(int) });
+
+
+            Expression mainExpression = null;
+
+
+            MemberExpression LeftProp = Expression.Property(FunParam, TSourceProp.Name);
+            var itemParameter = Expression.Parameter(typeof(TSource), "item");
+            var functions = Expression.Property(null, typeof(EF).GetProperty(nameof(EF.Functions)));
+
+            //var like = typeof(Enumerable).GetMethod("Contains", new Type[] { functions.Type, TSourceProp.PropertyType, QueryTypeMemberInfo.PropertyType });
+
+
+            var FunGeneric = typeof(Enumerable).GetMethods().First(o => o.Name == "Contains" && o.GetParameters().Length == 2);
+
+            var Fun = FunGeneric.MakeGenericMethod(TSourceProp.PropertyType);
+
+            mainExpression = Expression.Call(
+                       null,
+                       Fun,
+                       Expression.Constant(QueryParamFieldValue),
+                       LeftProp);
+
+            mainExpression = Expression.Not(mainExpression);
 
             return mainExpression;
 

@@ -11,8 +11,15 @@ namespace OrderManagementModel.DBWhere
         /// <summary>
         /// id
         /// </summary>
-        [QueryParam( OperatorType.Equal,nameof(Authority_Account.ID)) ]
+        [QueryParam( OperatorType.Equal,nameof(Authority_Account.ID))]
         public int ID { get; set; }
+
+
+
+        [QueryParam(OperatorType.In, nameof(Authority_Account.ID))]
+        public int[] IDs { get; set; }
+        [QueryParam(OperatorType.NotIn, nameof(Authority_Account.ID))]
+        public int[] NoIDs { get; set; }
         /// <summary>
         /// 账号
         /// </summary>

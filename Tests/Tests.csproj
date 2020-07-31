@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="RedisBeetleX\**" />
+    <EmbeddedResource Remove="RedisBeetleX\**" />
+    <None Remove="RedisBeetleX\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
     <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
@@ -15,6 +21,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OrderManagementBll\OrderManagementBll.csproj" />
+    <ProjectReference Include="..\RedisDao\RedisDao.csproj" />
+    <ProjectReference Include="..\RedisDao_BeetleX\RedisDao_BeetleX.csproj" />
     <ProjectReference Include="..\Util\Util.csproj" />
   </ItemGroup>
 

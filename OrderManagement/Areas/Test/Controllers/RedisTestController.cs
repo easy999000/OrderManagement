@@ -19,16 +19,16 @@ namespace OrderManagement.Areas.Test.Controllers
         private readonly IDatabase _redis;
         public RedisTestController(RedisHelper client)
         {
-            _redis = client.GetDatabase();
+            //_redis = client.GetDatabase();
         }
 
         public IActionResult Index2()
         {
-            _redis.HashGet("TestRedis", "11111");
+            //_redis.HashGet("TestRedis", "11111");
 
 
 
-            string temp = _redis.StringGet("TestRedis");
+            //string temp = _redis.StringGet("TestRedis");
             return View();
         }
          

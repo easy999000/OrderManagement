@@ -17,13 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Util", "Util\Util.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedisDao", "RedisDao\RedisDao.csproj", "{FEA04216-4899-4D62-AF67-1895E7F08A6C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderTest", "OrderTest\OrderTest.csproj", "{36025424-4E60-40FF-AF24-01546BB99EE1}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{75DD7E8C-A279-480C-B6F6-383F0CE42CCB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspWeb", "AspWeb\AspWeb.csproj", "{1C84E0D1-AB32-4600-A492-77FF45C055E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{F487D3BA-F291-46B9-84AB-7531AB8D48EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisDao_BeetleX", "RedisDao_BeetleX\RedisDao_BeetleX.csproj", "{1C6BCCF9-4854-42B6-86BC-B4EF323E03E4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeetleX.Redis", "..\..\BeetleX.Redis\src\BeetleX.Redis.csproj", "{D4B61733-BF12-459D-8CD3-6929C71A721A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,10 +61,6 @@ Global
 		{FEA04216-4899-4D62-AF67-1895E7F08A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEA04216-4899-4D62-AF67-1895E7F08A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEA04216-4899-4D62-AF67-1895E7F08A6C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36025424-4E60-40FF-AF24-01546BB99EE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36025424-4E60-40FF-AF24-01546BB99EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36025424-4E60-40FF-AF24-01546BB99EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36025424-4E60-40FF-AF24-01546BB99EE1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{75DD7E8C-A279-480C-B6F6-383F0CE42CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{75DD7E8C-A279-480C-B6F6-383F0CE42CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75DD7E8C-A279-480C-B6F6-383F0CE42CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -75,6 +73,14 @@ Global
 		{F487D3BA-F291-46B9-84AB-7531AB8D48EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F487D3BA-F291-46B9-84AB-7531AB8D48EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F487D3BA-F291-46B9-84AB-7531AB8D48EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C6BCCF9-4854-42B6-86BC-B4EF323E03E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C6BCCF9-4854-42B6-86BC-B4EF323E03E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C6BCCF9-4854-42B6-86BC-B4EF323E03E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C6BCCF9-4854-42B6-86BC-B4EF323E03E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4B61733-BF12-459D-8CD3-6929C71A721A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B61733-BF12-459D-8CD3-6929C71A721A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B61733-BF12-459D-8CD3-6929C71A721A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B61733-BF12-459D-8CD3-6929C71A721A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
