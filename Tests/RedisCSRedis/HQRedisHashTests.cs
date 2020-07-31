@@ -30,6 +30,7 @@ namespace RedisDao.RedisCSRedis.Tests
 
             var comm = db.GetHashComm("userHash");
             var comm2 = db.GetHashComm("userHashfloat");
+          
 
             var v1 = comm.HSet("user1", u1);
             var v21 = comm.HSet("user2", u2);
@@ -49,6 +50,8 @@ namespace RedisDao.RedisCSRedis.Tests
             var v11 = comm.HGet<user>("user7");
             var v12 = comm.HGetAllData<user>();
             var v13 = comm2.HIncrby("user10", 3);
+            var v132 = comm2.HIncrby("user10", 4);
+            var v133 = comm2.HIncrby("user10", 5);
             var v14 = comm2.HIncrByFloat("user11", 22.22);
             var v15 = comm.HMGet<user>("user7", "user8");
 

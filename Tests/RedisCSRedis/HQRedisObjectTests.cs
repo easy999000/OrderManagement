@@ -24,17 +24,20 @@ namespace RedisDao.RedisCSRedis.Tests
             user u8 = new user() { id = 8, money = 88.88, name = "b88小李小李小李小李小李小李小李" };
             user u9 = new user() { id = 9, money = 99.99, name = "b99小刘小刘小刘小刘小刘小刘小刘" };
 
-            HQRedisService service = new HQRedisService("8.129.197.125", "Bus01#dwjwlxs", 6379, false);
+            HQRedisService service = new HQRedisService("8.129.197.125", "Bus01#dwjwlxs", 6379, false,"ObjectTest");
             //HQRedisService service = new HQRedisService("192.168.18.115", null, 0, false);
 
             HQRedisDB db = new HQRedisDB(service, 4);
 
             var comm = db.GetObjectComm ("user");
-            var comm2 = db.GetObjectComm ("userfloat");
+            var comm2 = db.GetObjectComm("userfloat");
+            var comm3 = db.GetObjectComm("userInt");
 
             var v1 = comm.SetData(u1);
 
-            var v5 = comm2.IncrBy(3);
+            var v5 = comm3.IncrBy(3);
+            var v52 = comm3.IncrBy(4);
+            var v53 = comm3.IncrBy(5);
             var v62 = comm2.IncrByFloat(11.11f);
             var v63 = comm2.IncrByFloat(11.11f);
             var v64 = comm2.IncrByFloat(11.11f);

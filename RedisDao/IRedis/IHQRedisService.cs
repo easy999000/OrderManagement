@@ -22,8 +22,12 @@ namespace RedisDao.IRedis
         /// 是否ssl
         /// </summary>
         public bool SSL { get; set; }
+        /// <summary>
+        /// Key前缀
+        /// </summary>
+        public string Prefix { get; set; }
 
-
+        
 
     }
 }

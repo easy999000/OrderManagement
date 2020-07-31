@@ -14,6 +14,7 @@ namespace RedisDao.RedisCSRedis
         public string  Password { get; set; }
         public int Prot { get; set; } = 6379;
         public bool SSL { get; set; }
+        public string Prefix { get; set; }
 
 
         /// <summary>
@@ -23,12 +24,13 @@ namespace RedisDao.RedisCSRedis
         /// <param name="Password"></param>
         /// <param name="Prot"></param>
         /// <param name="SSL"></param>
-        public HQRedisService(string Host, string Password, int Prot, bool SSL)
+        public HQRedisService(string Host, string Password="", int Prot=6379, bool SSL=false,string Prefix="")
         {
             this.Host = Host;
             this.Password = Password;
             this.Prot = Prot;
             this.SSL = SSL;
+            this.Prefix = Prefix;
             if (Prot==0)
             {
                 this.Prot = 6379;

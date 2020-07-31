@@ -12,7 +12,7 @@ namespace RedisDao.RedisCSRedis
 
         public HQRedisDB(HQRedisService Service, int DBIndex)
         { 
-            string connStr = $"{Service.Host}:{Service.Prot},defaultDatabase={DBIndex},password={Service.Password},ssl={Service.SSL},testcluster=false,poolsize=20,tryit=0";
+            string connStr = $"{Service.Host}:{Service.Prot},defaultDatabase={DBIndex},password={Service.Password},prefix={Service.Prefix},ssl={Service.SSL},testcluster=false,poolsize=20,tryit=0";
             DB = new CSRedis.CSRedisClient(connStr);
               
         }
