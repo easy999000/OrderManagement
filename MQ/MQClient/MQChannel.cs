@@ -1,4 +1,5 @@
-﻿using RabbitMQ.Client;
+﻿using MQ.Model;
+using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
 using System.Collections.Generic;
@@ -48,6 +49,8 @@ namespace MQ.MQClient
             Channel.QueueBind(QueueName, ExchangeName, BindingKey);
         }
 
+        public Action<MQWebApiMsg> ReceivedDataEvent;
+
         /// <summary>
         /// 推送参数是否初始化
         /// </summary>
@@ -59,7 +62,7 @@ namespace MQ.MQClient
         void InitPush()
         {
             Channel.ConfirmSelect();
-            
+
             /*-------------Return机制：不可达的消息消息监听--------------*/
 
             //这个事件就是用来监听我们一些不可达的消息的内容的：比如某些情况下，如果我们在发送消息时，当前的exchange不存在或者指定的routingkey路由不到，这个时候如果要监听这种不可达的消息，就要使用 return
@@ -128,24 +131,12 @@ namespace MQ.MQClient
             Channel.BasicPublish(exchange: ExchangeName, routingKey: Routingkey, mandatory: true, basicProperties: props, body: msgBody);
 
         }
-
-
+         
         /// <summary>
-        /// 推送参数是否初始化
-        /// </summary>
-        bool IsInitReceived = false;
-
-        /// <summary>
-        /// 初始化推送参数
-        /// </summary>
-        void InitReceived()
-        {
-        }
-
-        /// <summary>
-        /// 接受消息
+        /// 启动消息接收
         /// </summary>
         /// <param name="QueueName"></param>
+
         public void ReceivedMsg(string QueueName)
         {
             //if (!IsInitReceived)
@@ -166,17 +157,25 @@ namespace MQ.MQClient
                     var f = basic.RoutingKey;
                     var e = basic.BasicProperties.Headers;
 
-                    Console.WriteLine(string.Format("接收时间:{0}，消息内容：{1}:全文:{2}", DateTime.Now.ToString("HH:mm:ss"), Encoding.UTF8.GetString(msgBody.ToArray())
+                    var DataStr = Encoding.UTF8.GetString(msgBody.ToArray());
+                    var Data = Newtonsoft.Json.JsonConvert.DeserializeObject<MQWebApiMsg>(DataStr);
+#if DEBUG
+
+                    Console.WriteLine(string.Format("接收时间:{0}，消息内容：{1}:全文:{2}", DateTime.Now.ToString("HH:mm:ss"), DataStr
                         , Newtonsoft.Json.JsonConvert.SerializeObject(basic)));
-                    
+
+#endif
+                    ReceivedDataEvent?.Invoke(Data);
+
+
                     //手动ACK确认分两种:BasicAck:肯定确认 和 BasicNack:否定确认
                     Channel.BasicAck(deliveryTag: basic.DeliveryTag, multiple: false);//这种情况是消费者告诉RabbitMQ服务器，我已经确认收到了消息
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     //requeue:被拒绝的是否重新入队列；true：重新进入队列 fasle：抛弃此条消息
                     //multiple：是否批量.true:将一次性拒绝所有小于deliveryTag的消息
-                    Channel.BasicNack(deliveryTag: basic.DeliveryTag, multiple: false, requeue: false);//这种情况是消费者告诉RabbitMQ服务器,因为某种原因我无法立即处理这条消息，这条消息重新回到队列，或者丢弃吧.requeue: false表示丢弃这条消息，为true表示重回队列
+                    Channel.BasicNack(deliveryTag: basic.DeliveryTag, multiple: false, requeue: true);//这种情况是消费者告诉RabbitMQ服务器,因为某种原因我无法立即处理这条消息，这条消息重新回到队列，或者丢弃吧.requeue: false表示丢弃这条消息，为true表示重回队列
                 }
             };
 

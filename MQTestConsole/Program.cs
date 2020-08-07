@@ -1,4 +1,7 @@
 ﻿using MQ;
+using MQ.Model;
+using MQ.MQConfig;
+using MQ.MQService;
 using RabbitMQ.Client;
 using System;
 using System.Data;
@@ -41,42 +44,76 @@ namespace MQTestConsole
 
         static void test2()
         {
+            ConfigManager configTest = new ConfigManager();
+
+            configTest.ServerConfig = new MQServerConfig();
+            configTest.ServerConfig.Host = "192.168.18.115";
+            configTest.ServerConfig.Account = "admin";
+            configTest.ServerConfig.Pass = "admin";
+            configTest.ServerConfig.Port = 0;
+            configTest.ServerConfig.VirtualHost = "/";
+
+            configTest.Data = new System.Collections.Generic.List<MQQueueConfig>();
+            MQQueueConfig queueConfig = new MQQueueConfig();
+
+            string QueueName = "Queue" + DateTime.Now.Day.ToString();
+            queueConfig.BindingKeys = new string[] { "MQtest.Client.#" };
+            queueConfig.ExchangeName = exchangeName;
+            queueConfig.QueueName = QueueName;
+            queueConfig.ThreadCount = 0;
+
+            configTest.Data.Add(queueConfig);
+
+            ConfigManager.SaveConfig(configTest);
+
+            MainService server = new MainService();
+            server.Start();
+
+
+
+
+
+
+            ///////////////////////////////
             MQ.MQClient.MQConnection conn = new MQ.MQClient.MQConnection("192.168.18.115", "admin", "admin", 5672, "/");
 
             var Channel = conn.CreateModel();
 
-            string ExchangeName = "exchangeTopic";
+            //string ExchangeName = "exchangeTopic";
 
-            Channel.CreateExchange(ExchangeName, MQ.MQClient.ExchangeType.topic);
+            //Channel.CreateExchange(ExchangeName, MQ.MQClient.ExchangeType.topic);
 
-            string QueueName = "Queue" + DateTime.Now.Day.ToString();
+            //string QueueName = "Queue" + DateTime.Now.Day.ToString();
 
-            Channel.CreateQueue(QueueName);
+            //Channel.CreateQueue(QueueName);
 
-            Channel.Binding(exchangeName, QueueName, "MQtest.Client.#");
+            //Channel.Binding(exchangeName, QueueName, "MQtest.Client.#");
 
-            Channel.ReceivedMsg(QueueName);
+            //Channel.ReceivedMsg(QueueName);
 
 
             while (true)
             {
                 Console.WriteLine("输入消息");
                 var msg = Console.ReadLine();
-
+                MQWebApiMsg msgData = new MQWebApiMsg();
+                msgData.Host = "www.baidu.com";
+                msgData.Path = "www.baidu.com";
+                
                 for (int i = 0; i < 30; i++)
                 {
-                    var msg2 = msg + i.ToString();
+                    msgData.Data =  msg + i.ToString();
                     if (i % 3 == 0)
                     {
 
-                        Channel.PushMsg(msg2, exchangeName, "MQtest.Client2.test1");
+                        Channel.PushMsg(msgData, exchangeName, "MQtest.Client2.test1");
                         continue;
                     }
 
-                    Channel.PushMsg(msg2, exchangeName, "MQtest.Client.test1");
+                    Channel.PushMsg(msgData, exchangeName, "MQtest.Client.test1");
 
                 }
-                 
+
             }
 
         }
