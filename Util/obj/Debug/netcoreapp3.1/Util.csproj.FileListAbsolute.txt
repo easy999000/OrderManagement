@@ -15,3 +15,4 @@ D:\zhaopeng\code\GitHubOrderManager\OrderManagement\Util\obj\Debug\netcoreapp3.1
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\Util\obj\Debug\netcoreapp3.1\Util.csproj.CoreCompileInputs.cache
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\Util\obj\Debug\netcoreapp3.1\Util.dll
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\Util\obj\Debug\netcoreapp3.1\Util.pdb
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\Util\obj\Debug\netcoreapp3.1\Util.csprojAssemblyReference.cache
