@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MQ.MQConfig
+namespace MQServer.MQConfig
 {
     public class MQQueueConfig
     {

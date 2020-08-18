@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MQ\MQ.csproj" />
+    <ProjectReference Include="..\MQ\MQServer.csproj" />
     <ProjectReference Include="..\OrderManagementBll\OrderManagementBll.csproj" />
     <ProjectReference Include="..\RedisDao\RedisDao.csproj" />
     <ProjectReference Include="..\RedisDao_BeetleX\RedisDao_BeetleX.csproj" />

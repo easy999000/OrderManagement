@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MQ.Model
+namespace MQServer.Model
 {
+    /// <summary>
+    /// WebApi消息模型
+    /// </summary>
     public class MQWebApiMsg
     {
         /// <summary>
@@ -18,5 +21,10 @@ namespace MQ.Model
         /// 数据
         /// </summary>
         public object Data { get; set; }
+
+        /// <summary>
+        /// 记录当前消息异常次数,发送消息的时候,不用手动设置这个参数.
+        /// </summary>
+        public int ExceptionTimes { get; set; } = 0;
     }
 }

@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.Configuration;
-using MQ.Tools;
+using MQServer.Tools;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace MQ.MQConfig
+namespace MQServer.MQConfig
 {
     public class ConfigManager
     {

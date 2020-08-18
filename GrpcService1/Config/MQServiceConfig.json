@@ -1,0 +1,17 @@
+﻿{
+  "ServerConfig": {
+    "Host": "192.168.18.7",
+    "Account": "admin",
+    "Pass": "admin",
+    "Port": 5672,
+    "VirtualHost": "/"
+  },
+  "Data": [
+    {
+      "QueueName": "Queue7",
+      "ExchangeName": "exchangeTopic",
+      "BindingKeys": [ "MQtest.Client.#" ],
+      "ThreadCount": 10
+    }
+  ]
+}

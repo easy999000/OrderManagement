@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option csharp_namespace = "MQGrpcServer.Protos";
+ 
+
+
+// The greeting service definition.
+service MQWebApiMsgServer {
+  // Sends a greeting
+  rpc PushData (MQWebApiMsg ) returns (PushDataReturn);
+   
+}
+message PushDataReturn{
+ 
+}
+
+message MQWebApiMsg{
+	
+        /// <summary>
+        /// 主机
+        /// </summary>
+        string Host =1;
+        /// <summary>
+        /// 接口路径
+        /// </summary>
+        string Path=2;
+        /// <summary>
+        /// 数据
+        /// </summary>
+        string Data=3;
+
+        ///队列的Key
+        string Key=4;
+}
