@@ -8,16 +8,16 @@ using System.Text;
 namespace MQServer.MQService
 {
     /// <summary>
-    /// 推送消息管理器
+    /// 推送线程池管理器
     /// </summary>
-    public class PushQueueManager
+    public class PushPollManager
     {
         MQServerConfig Server;
 
         ChannelPoolManager ChannelPool = null;
 
 
-        public PushQueueManager(MQServerConfig _Server)
+        public PushPollManager(MQServerConfig _Server)
         {
             Server = _Server;
             ChannelPool = new ChannelPoolManager(Server);

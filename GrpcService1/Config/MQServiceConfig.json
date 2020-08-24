@@ -1,17 +1,1 @@
-﻿{
-  "ServerConfig": {
-    "Host": "192.168.18.7",
-    "Account": "admin",
-    "Pass": "admin",
-    "Port": 5672,
-    "VirtualHost": "/"
-  },
-  "Data": [
-    {
-      "QueueName": "Queue7",
-      "ExchangeName": "exchangeTopic",
-      "BindingKeys": [ "MQtest.Client.#" ],
-      "ThreadCount": 10
-    }
-  ]
-}
+﻿{"ServerConfig":{"Host":"192.168.18.7","Account":"admin","Pass":"admin","Port":5672,"VirtualHost":"/"},"Data":{"999":{"QueueName":"999","ExchangeName":"exchangeTopic","BindingKeys":["MQtest.Client.#"],"ThreadCount":15}}}

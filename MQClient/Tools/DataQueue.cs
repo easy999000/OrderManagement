@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 
-namespace MQServer.Tools
+namespace MQClient.Tools
 {
     /// <summary>
     /// 数据缓存

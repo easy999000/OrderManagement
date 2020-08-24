@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using System.Threading;
 
 namespace MQServer.RabbitClient
 {
@@ -14,6 +15,13 @@ namespace MQServer.RabbitClient
         public MQConnection Conn;
 
         IModel RabbitChannel;
+
+
+        /// <summary>
+        /// 安全退出同步锁
+        /// </summary>
+        ManualResetEventSlim StopLock = new ManualResetEventSlim(true, 100);
+
         internal MQChannel(MQConnection Conn)
         {
             this.Conn = Conn;
@@ -172,6 +180,8 @@ namespace MQServer.RabbitClient
 
         }
 
+        string consumerTag;
+
         /// <summary>
         /// 启动消息接收
         /// </summary>
@@ -184,9 +194,28 @@ namespace MQServer.RabbitClient
 
             consumer.Received += ReceivedEventFun;
 
-            RabbitChannel.BasicConsume(QueueName, autoAck: false, consumer: consumer);//第二个参数autoAck设为true为自动应答，false为手动ack ;这里一定要将autoAck设置false,告诉MQ服务器，发送消息之后，消息暂时不要删除，等消费者处理完成再说
+            consumerTag = Guid.NewGuid().ToString();
+
+            RabbitChannel.BasicConsume(QueueName, autoAck: false, consumer: consumer, consumerTag: consumerTag);//第二个参数autoAck设为true为自动应答，false为手动ack ;这里一定要将autoAck设置false,告诉MQ服务器，发送消息之后，消息暂时不要删除，等消费者处理完成再说
 
         }
+
+        /// <summary>
+        /// 安全停止接收消费
+        /// </summary>
+        public void SafeStopReceive()
+        {
+            RabbitChannel.BasicCancel(consumerTag);
+            StopLock.Wait();
+            StopLock.Reset(); 
+        }
+
+
+
+
+
+
+
         /// <summary>
         /// 再次推送失败消息
         /// </summary>
@@ -225,6 +254,8 @@ namespace MQServer.RabbitClient
         {
             try
             {
+                StopLock.Wait();
+                StopLock.Reset();
                 //int aa = 1; int bb = 0; int cc = aa / bb; //模拟异常，这条消息消费失败
                 var msgBody = basic.Body; //获取消息内容
                 //var a = basic.ConsumerTag;
@@ -244,12 +275,12 @@ namespace MQServer.RabbitClient
                     {
                         //手动ACK确认分两种:BasicAck:肯定确认 和 BasicNack:否定确认
                         RabbitChannel.BasicAck(deliveryTag: basic.DeliveryTag, multiple: false);//这种情况是消费者告诉RabbitMQ服务器，我已经确认收到了消息
-                         
+
                     }
                     else
                     {
                         PushExceptionMsgAgain(basic, Data);
-                    } 
+                    }
 
                 }
                 catch (Exception ex3)
@@ -265,6 +296,7 @@ namespace MQServer.RabbitClient
             finally
             {
 
+                StopLock.Set();
             }
         }
 

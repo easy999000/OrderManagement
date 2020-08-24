@@ -1,6 +1,6 @@
 ﻿
 using Grpc.Net.Client;
-using GrpcService1;
+
 using MQServer;
 using MQServer.Model;
 using MQServer.RabbitClient;
@@ -18,42 +18,25 @@ namespace MQTestConsole
     {
         static void Main(string[] args)
         {
-            test3();
-
-
-            /////grpc
-
-
-
-            //// The port number(5001) must match the port of the gRPC server.
-            //using var channel = GrpcChannel.ForAddress("http://localhost:25672");
-            //var client = new Greeter.GreeterClient(channel);
-            //var reply = client.SayHelloAsync(
-            //                  new HelloRequest { Name = "GreeterClient" }).ResponseAsync.Result;
-
-            //var reply2 = client.grpcTest1(
-            //                  new HelloRequest { Name = "test" });
-
-
+            //createConfig();
 
             //test2();
+
+            //test3();
+
+            test4();
+
+
             Console.ReadLine();
         }
 
-        static void test1()
-        {
-            try
-            {
+        static string ServerConn = "http://192.168.18.36:35672;http://192.168.18.190:35672;http://192.168.18.11:35672;";
+        //static string ServerConn = "http://192.168.18.11:35672;";
 
-            }
-            catch (Exception ex)
-            {
+        static MQClient.Client grpc = new MQClient.Client(ServerConn);
 
-                throw;
-            }
-        }
 
-        static void test2()
+        static void createConfig()
         {
             ConfigManager configTest = new ConfigManager();
 
@@ -64,7 +47,8 @@ namespace MQTestConsole
             configTest.ServerConfig.Port = 0;
             configTest.ServerConfig.VirtualHost = "/";
 
-            configTest.Data = new System.Collections.Generic.List<MQQueueConfig>();
+            configTest.Data = new System.Collections.Concurrent.ConcurrentDictionary<string, MQQueueConfig>();
+
             MQQueueConfig queueConfig = new MQQueueConfig();
 
             string QueueName = "Queue" + DateTime.Now.Day.ToString();
@@ -73,108 +57,90 @@ namespace MQTestConsole
             queueConfig.QueueName = QueueName;
             queueConfig.ThreadCount = 0;
 
-            configTest.Data.Add(queueConfig);
+            configTest.Data.TryAdd(queueConfig.QueueName, queueConfig);
 
             ConfigManager.SaveConfig(configTest);
 
-            MainService server = new MainService();
-            server.Start();
 
 
+        }
 
-
-
-
-            ///////////////////////////////
-            MQConnection conn = new MQConnection("192.168.18.115", "admin", "admin", 5672, "/");
-
-            var Channel = conn.CreateChannel();
-
-            //string ExchangeName = "exchangeTopic";
-
-            //Channel.CreateExchange(ExchangeName, MQ.MQClient.ExchangeType.topic);
-
-            //string QueueName = "Queue" + DateTime.Now.Day.ToString();
-
-            //Channel.CreateQueue(QueueName);
-
-            //Channel.Binding(exchangeName, QueueName, "MQtest.Client.#");
-
-            //Channel.ReceivedMsg(QueueName);
-
-
-            while (true)
+        static void test1()
+        {
+            try
             {
-                Log.WriteLine("输入消息");
-                var msg = Console.ReadLine();
-                MQWebApiMsg msgData = new MQWebApiMsg();
-                msgData.Host = "www.baidu.com";
-                msgData.Path = "www.baidu.com";
+                Log.WriteLine("消息内容:");
+                String message = Console.ReadLine();
 
-                for (int i = 0; i < 30; i++)
-                {
-                    msgData.Data = msg + i.ToString();
-                    if (i % 3 == 0)
-                    {
 
-                        Channel.PushMsg(msgData, exchangeName, "MQtest.Client2.test1");
-                        continue;
-                    }
+                string msg = message + ",Date:" + DateTime.Now.ToString();
 
-                    Channel.PushMsg(msgData, exchangeName, "MQtest.Client.test1");
+                var Data = new MQClient.Model.MQWebApiData();
+                Data.Host = "http://192.168.18.190:10001/";
+                Data.Path = "mqtest/test_0s";
+                Data.Data = msg;
 
-                }
 
+                grpc.PushData("exchangeTopic:MQtest.Client.#", Data);
+                //grpc.PushDataAsync("exchangeTopic:MQtest.Client.#", Data);
             }
+            catch (Exception ex)
+            {
 
+                throw;
+            }
         }
 
         static void test3()
         {
             //MQClient.GrpcClient grpc = new MQClient.GrpcClient("https://localhost:35672");
             //MQClient.GrpcClient grpc = new MQClient.GrpcClient("http://127.0.0.1:35672");
-            MQClient.Client grpc = new MQClient.Client("http://192.168.18.190:35672");
+            //MQClient.Client grpc = new MQClient.Client("http://192.168.18.190:35672");
 
-            while (true)
+            //while (true)
+            //{
+            Log.WriteLine("消息内容:");
+            String message = Console.ReadLine();
+            //if (message == "exit")
+            //{
+            //    break;
+            //}
+
+            for (int i = 0; i < 200; i++)
             {
-                Log.WriteLine("消息内容:");
-                String message = Console.ReadLine();
-                if (message == "exit")
-                {
-                    break;
-                }
-
-                for (int i = 0; i < 4; i++)
-                {
-                    System.Threading.Thread th = new System.Threading.Thread(test3_1); ;
-                    th.Start(message);
-                }
+                System.Threading.Thread th = new System.Threading.Thread(Test3_1); ;
+                th.Start(message);
             }
-
-
-
+            //}
 
         }
+
 
         /// <summary>
         /// 30s 500 一批整数分钟开始
         /// </summary>
         /// <param name="message"></param>
-        static void test3_1(object message)
+        static void Test3_1(object message)
         {
 
-            MQClient.Client grpc = new MQClient.Client("http://192.168.18.190:35672");
+            //MQClient.Client grpc = new MQClient.Client("http://192.168.18.36:35672");
+            //MQClient.Client grpc = new MQClient.Client(ServerConn);
+
             int second = System.DateTime.Now.Second;
 
-
+            second = 60 - second;
+            if (second > 30)
+            {
+                second = second - 30;
+            }
+            System.Threading.Thread.Sleep(second * 1000);
             while (true)
             {
-                System.Threading.Thread.Sleep((60 - second) * 1000);
                 for (int i = 0; i < 500; i++)
                 {
                     try
                     {
-                        string msg = message + ", i:" + i.ToString();
+                        string msg = message + ", i:" + i.ToString() + ",Date:" + DateTime.Now.ToString();
 
                         var Data = new MQClient.Model.MQWebApiData();
                         Data.Host = "http://192.168.18.190:10001/";
@@ -182,7 +148,8 @@ namespace MQTestConsole
                         Data.Data = msg;
 
 
-                        grpc.PushDataAsync("exchangeTopic:MQtest.Client.#", Data);
+                        grpc.PushData("exchangeTopic:MQtest.Client.#", Data);
+                        //grpc.PushDataAsync("exchangeTopic:MQtest.Client.#", Data);
                     }
                     catch (Exception ex)
                     {
@@ -191,8 +158,136 @@ namespace MQTestConsole
                 }
 
 
-                //System.Threading.Thread.Sleep(30 * 1000);
+                System.Threading.Thread.Sleep(30 * 1000);
             }
+        }
+
+        static void test4()
+        {
+            while (true)
+            {
+                Log.WriteLine("命令:1update,2 get, 3 remove ,4 updateHost, 5 测试数据 , 6 单条测试");
+                String message = Console.ReadLine();
+
+                switch (message)
+                {
+                    case "1":
+                        AddOrUpdateQueueAsyncTest();
+                        break;
+                    case "2":
+                        GetConfigTest();
+                        break;
+                    case "3":
+                        RemoveQueueTest();
+                        break;
+                    case "4":
+                        UpdateServerTest();
+                        break;
+                    case "5":
+                        test3();
+                        break;
+                    case "6":
+                        test1();
+                        break;
+                    case "7":
+                        break;
+                    case "8":
+                        break;
+                    case "9":
+                        break;
+                    case "0":
+                        return;
+
+                    default:
+                        break;
+                }
+
+            }
+
+
+        }
+
+
+        static public void AddOrUpdateQueueAsyncTest()
+        {
+            Log.WriteLine("队列名称:");
+            String message = Console.ReadLine();
+
+            //MQClient.Client grpc = new MQClient.Client("http://192.168.18.190:35672");
+            MQClient.Client grpc = new MQClient.Client("http://192.168.18.11:35672");
+
+            MQGrpcServer.Protos.MQQueueConfig newConfig = new MQGrpcServer.Protos.MQQueueConfig();
+
+            newConfig.BindingKeys.Add("MQtest.Client.#");
+            newConfig.ExchangeName = "exchangeTopic";
+            newConfig.QueueName = message;
+            newConfig.ThreadCount = 15;
+
+
+            grpc.AddOrUpdateQueue(newConfig);
+
+
+        }
+
+        static public void GetConfigTest()
+        {
+            //MQClient.Client grpc = new MQClient.Client("http://192.168.18.190:35672");
+            MQClient.Client grpc = new MQClient.Client("http://192.168.18.11:35672");
+            try
+            {
+
+                var res = grpc.GetConfig();
+                Log.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(res));
+            }
+            catch (Grpc.Core.RpcException ex2)
+            {
+
+                throw;
+            }
+            catch (System.ArgumentException ex1)
+            {
+
+                throw;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        }
+
+        static public void RemoveQueueTest()
+        {
+            Log.WriteLine("队列名称:");
+            String message = Console.ReadLine();
+
+            //MQClient.Client grpc = new MQClient.Client("http://192.168.18.190:35672");
+            MQClient.Client grpc = new MQClient.Client("http://192.168.18.11:35672");
+
+            grpc.RemoveQueueAsync(new MQGrpcServer.Protos.RemoveQueueName() { QueueName = message });
+        }
+
+        static public void UpdateServerTest()
+        {
+            Log.WriteLine("mq服务host:");
+            String message = Console.ReadLine();
+
+            //MQClient.Client grpc = new MQClient.Client("http://192.168.18.190:35672");
+            MQClient.Client grpc = new MQClient.Client("http://192.168.18.11:35672");
+
+            MQGrpcServer.Protos.MQServerConfig ServerConfig = new MQGrpcServer.Protos.MQServerConfig();
+
+            ServerConfig.Host = message;
+            ServerConfig.Account = "admin";
+            ServerConfig.Pass = "admin";
+            ServerConfig.Port = 0;
+            ServerConfig.VirtualHost = "/";
+
+
+
+            grpc.UpdateServer(ServerConfig);
         }
 
         static string routingKey = "wabapi.test";

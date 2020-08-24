@@ -17,6 +17,7 @@ namespace MQServer.Handler.MQService
         /// 队列配置
         /// </summary>
         MQQueueConfig Config;
+
         /// <summary>
         /// 服务器配置
         /// </summary>
@@ -26,7 +27,6 @@ namespace MQServer.Handler.MQService
         /// Post处理程序
         /// </summary>
         PostWebApiHandler PostHandler = new PostWebApiHandler();
-
 
         /// <summary>
         /// 信道管理器
@@ -40,6 +40,18 @@ namespace MQServer.Handler.MQService
             Config = _Config;
             Server = _Server;
             Init();
+        }
+
+        /// <summary>
+        /// 停止运行
+        /// </summary>
+        public void SafeStop()
+        {
+            foreach (var item in ChannelManager.AllChannel
+                )
+            {
+                item.SafeStopReceive(); 
+            }
         }
 
 

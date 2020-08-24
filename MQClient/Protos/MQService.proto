@@ -3,23 +3,59 @@ syntax = "proto3";
 option csharp_namespace = "MQGrpcServer.Protos";
  
 
-
-// The greeting service definition.
+ ///MQ服务接口
 service MQWebApiMsgServer {
-  // Sends a greeting
-  rpc PushData (MQWebApiMsg ) returns (PushDataReturn);
+  ///推送消息到队列
+  rpc PushData (MQWebApiMsg ) returns (NullClass);
+  
+        /// <summary>
+        /// 更新队列配置
+        /// </summary>
+        /// <param name="QueueConfig"></param>
+        rpc  AddOrUpdateQueue(MQQueueConfig ) returns (NullClass);
+
+
+        /// <summary>
+        /// 移除队列
+        /// </summary>
+        /// <param name="QueueName"></param>
+        rpc  RemoveQueue(RemoveQueueName) returns (NullClass);
+
+
+        /// <summary>
+        /// 更新服务配置
+        /// </summary>
+        /// <param name="_ServerConfig"></param>
+        rpc  UpdateServer(MQServerConfig)  returns (NullClass);
+
+        ////获取队列配置
+        rpc  GetConfig(NullClass)  returns (ConfigManager);
+
    
 }
-message PushDataReturn{
+
+
+
+
+
+message NullClass{
+        string Res =1; 
+}
+message RemoveQueueName{
+        /// <summary>
+        /// 队列名字
+        /// </summary>
+        string QueueName =1; 
  
 }
+
 
 message MQWebApiMsg{
 	
         /// <summary>
         /// 主机
         /// </summary>
-        string Host =1;
+        string Host =1; 
         /// <summary>
         /// 接口路径
         /// </summary>
@@ -31,4 +67,60 @@ message MQWebApiMsg{
 
         ///队列的Key
         string Key=4;
+}
+ message MQServerConfig{
+        /// <summary>
+        /// 服务地址
+        /// </summary>
+          string Host=1;
+
+        /// <summary>
+        /// 账号
+        /// </summary>
+          string Account =2;
+
+        /// <summary>
+        /// 密码
+        /// </summary>
+          string Pass =3;
+         
+
+        /// <summary>
+        /// 端口
+        /// </summary>
+          int32 Port=4;
+
+        /// <summary>
+        /// 虚拟路径名字
+        /// </summary>
+          string VirtualHost =5;
+
+    }
+    message MQQueueConfig{
+        /// <summary>
+        /// 队列名字
+        /// </summary>
+          string QueueName=1;
+
+        /// <summary>
+        /// 交换机名字
+        /// </summary>
+          string ExchangeName =2;
+
+        /// <summary>
+        /// 绑定规则
+        /// </summary>
+         repeated  string  BindingKeys=3;
+
+
+        /// <summary>
+        /// 这个队列的处理线程数量
+        /// </summary>
+          int32 ThreadCount=4;
+
+
+    }
+message ConfigManager{
+          MQServerConfig ServerConfig=1;
+          map<string, MQQueueConfig> Data =2;
 }

@@ -31,6 +31,8 @@ namespace MQServer.MQService
         /// </summary>
         ConcurrentQueue<MQChannel> ChannelQueue = new ConcurrentQueue<MQChannel>();
 
+        public List<MQChannel> AllChannel = new List<MQChannel>();
+
         /// <summary>
         /// 服务器配置
         /// </summary>
@@ -42,7 +44,7 @@ namespace MQServer.MQService
         }
 
         /// <summary>
-        /// 
+        /// 自动调用信道执行方法
         /// </summary>
         /// <param name="Action"></param>
         /// <returns></returns>
@@ -87,17 +89,13 @@ namespace MQServer.MQService
             }
             return true;
 
-
-
-
         }
 
         /// <summary>
-        /// 用到用完返回信道池
-        /// 
+        /// 用到用完返回空闲信道池 
         /// </summary>
         /// <param name="Channel"></param>
-        public void EnqueueChannel(MQChannel Channel)
+        public void EnqueueFreeChannel(MQChannel Channel)
         {
             if (this.ConnList.Contains(Channel.Conn))
             {
@@ -106,13 +104,11 @@ namespace MQServer.MQService
             }
         }
 
-
-
         /// <summary>
-        /// 获取一个信道,如果获取失败返回null
+        /// 手动获取一个空闲信道,如果获取失败返回null
         /// </summary>
         /// <returns></returns>
-        public MQChannel  DequeueChannel ()
+        public MQChannel DequeueChannel()
         {
 
             MQChannel Channel = null;
@@ -142,6 +138,8 @@ namespace MQServer.MQService
             return Channel;
         }
 
+
+
         /// <summary>
         /// 创建信道,添加一个信道到信道池
         /// </summary>
@@ -169,7 +167,9 @@ namespace MQServer.MQService
 
             var Channel = Conn.CreateChannel();
 
-            this.EnqueueChannel(Channel);
+            this.EnqueueFreeChannel(Channel);
+
+            this.AllChannel.Add(Channel);
 
             return true;
 
@@ -177,6 +177,10 @@ namespace MQServer.MQService
 
         public void Dispose()
         {
+            foreach (var item in AllChannel)
+            {
+                item.Dispose();
+            }
             foreach (var item in ConnList)
             {
                 item.Dispose();

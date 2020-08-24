@@ -18,14 +18,74 @@ namespace MQServer
         /// <summary>
         /// 消费队列处理程序
         /// </summary>
-        ReceivedPoolManager QueueManager = null;
+        ReceivedPoolManager ReceivedQueueManager = null;
 
-        public PushQueueManager PushQueueClient;
+        /// <summary>
+        /// 
+        /// </summary>
+        public PushPollManager PushQueueClient;
 
         public MainService()
         {
+            var con = ConfigManager.LoadConfig();
+            Config = con;
 
         }
+        #region 接口
+
+        /// <summary>
+        /// 更新队列配置
+        /// </summary>
+        /// <param name="QueueConfig"></param>
+        public void AddOrUpdateQueue(MQQueueConfig QueueConfig)
+        {
+            Config.AddOrUpdateQueue(QueueConfig);
+            ConfigManager.SaveConfig(Config);
+            if (ReceivedQueueManager!=null)
+            {
+                ReceivedQueueManager.LoadConfig(Config);
+            }
+
+        }
+
+
+        /// <summary>
+        /// 移除队列
+        /// </summary>
+        /// <param name="QueueName"></param>
+        public void RemoveQueue(string QueueName)
+        {
+            Config.RemoveQueue(QueueName);
+            ConfigManager.SaveConfig(Config);
+            if (ReceivedQueueManager != null)
+            {
+                ReceivedQueueManager.LoadConfig(Config);
+            }
+        }
+
+
+        /// <summary>
+        /// 更新服务配置
+        /// </summary>
+        /// <param name="_ServerConfig"></param>
+        public void UpdateServer(MQServerConfig _ServerConfig)
+        {
+            Config.UpdateServer(_ServerConfig);
+            ConfigManager.SaveConfig(Config);
+            if (ReceivedQueueManager != null)
+            {
+                ReceivedQueueManager.LoadConfig(Config);
+            }
+        }
+
+        public ConfigManager GetConfig()
+        {
+            return Config;
+        }
+
+
+
+        #endregion
 
 
         /// <summary>
@@ -33,14 +93,11 @@ namespace MQServer
         /// </summary>
         public void Start()
         {
-            var con = ConfigManager.LoadConfig();
-            Config = con;
 
+            ReceivedQueueManager = new ReceivedPoolManager();
+            ReceivedQueueManager.LoadConfig(Config);
 
-            QueueManager = new ReceivedPoolManager();
-            QueueManager.LoadConfig(Config);
-
-            PushQueueClient = new PushQueueManager(Config.ServerConfig);
+            PushQueueClient = new PushPollManager(Config.ServerConfig);
 
             Log.WriteLine(@"
 =================================================================

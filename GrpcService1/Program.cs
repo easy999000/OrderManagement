@@ -6,6 +6,7 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
 namespace GrpcService1
@@ -28,15 +29,38 @@ namespace GrpcService1
                     webBuilder.ConfigureKestrel(options =>
                     {
                         // Setup a HTTP/2 endpoint without TLS.
-                        options.ListenAnyIP(35672, o => o.Protocols =
+
+                        string portStr = GetConfig("MQServicePort");
+
+                        int Port = 35672;
+
+                        bool b = int.TryParse(portStr, out Port);
+
+                        if (!b)
+                        {
+                            Port = 35672;
+                        }
+
+                        options.ListenAnyIP(Port, o => o.Protocols =
                           HttpProtocols.Http2);
                     });
 
                     webBuilder.UseStartup<Startup>();
-
                      
 
-                 
                 });
+
+        public static string GetConfig(string Key)
+        {
+
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json");
+            var config = builder.Build();
+
+            var Value = config.GetSection(Key).Value;
+
+            return Value;
+        }
     }
 }

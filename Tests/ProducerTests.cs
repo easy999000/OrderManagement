@@ -12,8 +12,7 @@ namespace MQ.Tests
     {
         [TestMethod()]
         public void MainTest()
-        {
-            Producer.Main(new string[0]);
+        { 
 
         }
     }

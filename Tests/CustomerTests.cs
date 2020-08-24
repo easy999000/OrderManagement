@@ -11,8 +11,7 @@ namespace MQ.Tests
     {
         [TestMethod()]
         public void MainTest()
-        {
-            Customer.Main();
+        { 
              
         }
     }

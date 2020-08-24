@@ -491,6 +491,7 @@ namespace MQServer.Tools
                     }
                 }
                 response.Close();
+                response.Dispose();
                 response = null;
             }
             catch (Exception ex)
