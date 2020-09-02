@@ -28,6 +28,7 @@
         ],
         "sources": {
           "D:\\NuGetPackages\\": {},
+          "http://192.168.18.190:8088/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -150,6 +151,7 @@
         ],
         "sources": {
           "D:\\NuGetPackages\\": {},
+          "http://192.168.18.190:8088/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -239,6 +241,7 @@
         ],
         "sources": {
           "D:\\NuGetPackages\\": {},
+          "http://192.168.18.190:8088/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -325,6 +328,7 @@
         ],
         "sources": {
           "D:\\NuGetPackages\\": {},
+          "http://192.168.18.190:8088/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -385,6 +389,7 @@
         ],
         "sources": {
           "D:\\NuGetPackages\\": {},
+          "http://192.168.18.190:8088/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -471,6 +476,7 @@
         ],
         "sources": {
           "D:\\NuGetPackages\\": {},
+          "http://192.168.18.190:8088/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

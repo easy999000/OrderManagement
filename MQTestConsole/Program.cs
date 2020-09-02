@@ -16,8 +16,21 @@ namespace MQTestConsole
 {
     class Program
     {
+        public class testModel
+        {
+            public string Msg { get; set; }
+            public int Age { get; set; }
+
+            public string Name
+            { get; set; }
+
+        }
+
+
         static void Main(string[] args)
         {
+
+
             //createConfig();
 
             //test2();
@@ -72,13 +85,17 @@ namespace MQTestConsole
                 Log.WriteLine("消息内容:");
                 String message = Console.ReadLine();
 
+                testModel M = new testModel();
+                M.Age = 1;
+                M.Msg = message;
+                M.Name = DateTime.Now.ToString();
 
                 string msg = message + ",Date:" + DateTime.Now.ToString();
 
                 var Data = new MQClient.Model.MQWebApiData();
                 Data.Host = "http://192.168.18.190:10001/";
                 Data.Path = "mqtest/test_0s";
-                Data.Data = msg;
+                Data.Data = M;
 
 
                 grpc.PushData("exchangeTopic:MQtest.Client.#", Data);
@@ -136,16 +153,22 @@ namespace MQTestConsole
             System.Threading.Thread.Sleep(second * 1000);
             while (true)
             {
-                for (int i = 0; i < 500; i++)
+                for (int i = 0; i < 200; i++)
                 {
                     try
                     {
                         string msg = message + ", i:" + i.ToString() + ",Date:" + DateTime.Now.ToString();
 
+                        testModel M = new testModel();
+                        M.Age = i;
+                        M.Msg = msg;
+                        M.Name = DateTime.Now.ToString();
+
                         var Data = new MQClient.Model.MQWebApiData();
                         Data.Host = "http://192.168.18.190:10001/";
                         Data.Path = "mqtest/test_0s";
-                        Data.Data = msg;
+                        //Data.Path = "mqtest/test_1s";
+                        Data.Data = M;
 
 
                         grpc.PushData("exchangeTopic:MQtest.Client.#", Data);
@@ -158,7 +181,7 @@ namespace MQTestConsole
                 }
 
 
-                System.Threading.Thread.Sleep(30 * 1000);
+                System.Threading.Thread.Sleep(10 * 1000);
             }
         }
 
@@ -210,18 +233,21 @@ namespace MQTestConsole
 
         static public void AddOrUpdateQueueAsyncTest()
         {
-            Log.WriteLine("队列名称:");
-            String message = Console.ReadLine();
-
             //MQClient.Client grpc = new MQClient.Client("http://192.168.18.190:35672");
-            MQClient.Client grpc = new MQClient.Client("http://192.168.18.11:35672");
-
+            MQClient.Client grpc = new MQClient.Client(ServerConn);
             MQGrpcServer.Protos.MQQueueConfig newConfig = new MQGrpcServer.Protos.MQQueueConfig();
 
-            newConfig.BindingKeys.Add("MQtest.Client.#");
+            Log.WriteLine("队列名称:");
+            String QueueName = Console.ReadLine();
+
+            Log.WriteLine("BindingKeys名称:");
+            String BindingKeys = Console.ReadLine();
+
+
+            newConfig.BindingKeys.Add(BindingKeys);
             newConfig.ExchangeName = "exchangeTopic";
-            newConfig.QueueName = message;
-            newConfig.ThreadCount = 15;
+            newConfig.QueueName = QueueName;
+            newConfig.ThreadCount = 5;
 
 
             grpc.AddOrUpdateQueue(newConfig);
@@ -232,7 +258,7 @@ namespace MQTestConsole
         static public void GetConfigTest()
         {
             //MQClient.Client grpc = new MQClient.Client("http://192.168.18.190:35672");
-            MQClient.Client grpc = new MQClient.Client("http://192.168.18.11:35672");
+            MQClient.Client grpc = new MQClient.Client(ServerConn);
             try
             {
 
@@ -264,7 +290,7 @@ namespace MQTestConsole
             String message = Console.ReadLine();
 
             //MQClient.Client grpc = new MQClient.Client("http://192.168.18.190:35672");
-            MQClient.Client grpc = new MQClient.Client("http://192.168.18.11:35672");
+            MQClient.Client grpc = new MQClient.Client(ServerConn);
 
             grpc.RemoveQueueAsync(new MQGrpcServer.Protos.RemoveQueueName() { QueueName = message });
         }
@@ -275,7 +301,7 @@ namespace MQTestConsole
             String message = Console.ReadLine();
 
             //MQClient.Client grpc = new MQClient.Client("http://192.168.18.190:35672");
-            MQClient.Client grpc = new MQClient.Client("http://192.168.18.11:35672");
+            MQClient.Client grpc = new MQClient.Client(ServerConn);
 
             MQGrpcServer.Protos.MQServerConfig ServerConfig = new MQGrpcServer.Protos.MQServerConfig();
 

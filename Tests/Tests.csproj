@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HttpHelper\HttpHelper.csproj" />
     <ProjectReference Include="..\MQClient\MQClient.csproj" />
     <ProjectReference Include="..\MQ\MQServer.csproj" />
     <ProjectReference Include="..\OrderManagementBll\OrderManagementBll.csproj" />
