@@ -43,7 +43,8 @@ namespace MQTestConsole
             Console.ReadLine();
         }
 
-        static string ServerConn = "http://192.168.18.36:35672;http://192.168.18.190:35672;http://192.168.18.11:35672;";
+        //static string ServerConn = "http://192.168.18.36:35672;http://192.168.18.190:35672;http://192.168.18.11:35672;";
+        static string ServerConn = "http://192.168.18.36:35672;http://192.168.18.190:35672;";
         //static string ServerConn = "http://192.168.18.11:35672;";
 
         static MQClient.Client grpc = new MQClient.Client(ServerConn);
@@ -181,7 +182,7 @@ namespace MQTestConsole
                 }
 
 
-                System.Threading.Thread.Sleep(10 * 1000);
+                System.Threading.Thread.Sleep(30 * 1000);
             }
         }
 
