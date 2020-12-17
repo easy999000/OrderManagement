@@ -1341,11 +1341,12 @@
       ],
       "sources": {
         "D:\\NuGetPackages\\": {},
-        "http://192.168.18.190:8088/nuget/": {},
+        "http://172.168.16.48:8080/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj": {
               "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj"
@@ -1361,6 +1362,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.Extensions.Caching.StackExchangeRedis": {
             "target": "Package",
@@ -1389,7 +1391,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

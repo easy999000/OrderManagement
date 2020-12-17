@@ -49,7 +49,8 @@ namespace OrderManagementBll.Authority
 
             OrderManagementDB DBcontext = new OrderManagementDB();
 
-            var user = DBcontext.Authority_Account.Where(w => w.Account == Account)
+            var user = DBcontext.Authority_Account
+                .Where(w => w.Account == Account)
                    .Include(p => p.RelatedRoles)
                    .ThenInclude(p => p.Role)
                    .ThenInclude(p => p.RelatedRoleBases)
@@ -119,6 +120,21 @@ namespace OrderManagementBll.Authority
 
             return result.SetResult(1, "ok");
         }
+
+        //public HQResult<string> DelRole(int AccountId, int RoleId)
+        //{
+        //    HQResult<string> result = new HQResult<string>();
+        //    OrderManagementDB DBcontext = new OrderManagementDB();
+
+        //    //DBcontext.Authority_RelatedAccountRole.FromSqlRaw
+        //}
+
+
+
+
+
+
+
 
     }
 }

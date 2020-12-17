@@ -28,14 +28,16 @@
         ],
         "sources": {
           "D:\\NuGetPackages\\": {},
-          "http://192.168.18.190:8088/nuget/": {},
+          "http://172.168.16.48:8080/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
             "projectReferences": {}
           },
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -47,6 +49,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
           "dependencies": {
             "BeetleX": {
               "target": "Package",
@@ -85,9 +88,10 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         },
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "BeetleX": {
               "target": "Package",
@@ -125,7 +129,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -151,11 +155,12 @@
         ],
         "sources": {
           "D:\\NuGetPackages\\": {},
-          "http://192.168.18.190:8088/nuget/": {},
+          "http://172.168.16.48:8080/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
               "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj": {
                 "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementDao_Mysql\\OrderManagementDao_Mysql.csproj"
@@ -180,6 +185,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -215,7 +221,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -241,11 +247,12 @@
         ],
         "sources": {
           "D:\\NuGetPackages\\": {},
-          "http://192.168.18.190:8088/nuget/": {},
+          "http://172.168.16.48:8080/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
               "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj": {
                 "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\OrderManagementModel\\OrderManagementModel.csproj"
@@ -261,6 +268,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http.Abstractions": {
               "target": "Package",
@@ -302,7 +310,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -328,11 +336,12 @@
         ],
         "sources": {
           "D:\\NuGetPackages\\": {},
-          "http://192.168.18.190:8088/nuget/": {},
+          "http://172.168.16.48:8080/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
               "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj": {
                 "projectPath": "D:\\zhaopeng\\code\\GitHubOrderManager\\OrderManagement\\Util\\Util.csproj"
@@ -348,6 +357,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -363,7 +373,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -389,11 +399,12 @@
         ],
         "sources": {
           "D:\\NuGetPackages\\": {},
-          "http://192.168.18.190:8088/nuget/": {},
+          "http://172.168.16.48:8080/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
               "D:\\zhaopeng\\code\\BeetleX.Redis\\src\\BeetleX.Redis.csproj": {
                 "projectPath": "D:\\zhaopeng\\code\\BeetleX.Redis\\src\\BeetleX.Redis.csproj"
@@ -409,6 +420,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "CSRedisCore": {
               "target": "Package",
@@ -450,7 +462,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -476,11 +488,12 @@
         ],
         "sources": {
           "D:\\NuGetPackages\\": {},
-          "http://192.168.18.190:8088/nuget/": {},
+          "http://172.168.16.48:8080/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -492,6 +505,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -513,7 +527,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -41,8 +41,6 @@ namespace WindwosAndLinuxServices
                 builder = builder.UseSystemd();
             }
 
-
-
             return builder;
         }
 

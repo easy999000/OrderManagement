@@ -27,7 +27,6 @@ D:\zhaopeng\code\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\CommonW
 D:\zhaopeng\code\OrderManagement\CommonWebModule\bin\Debug\netcoreapp3.1\Util.dll
 D:\zhaopeng\code\OrderManagement\CommonWebModule\bin\Debug\netcoreapp3.1\Util.pdb
 D:\zhaopeng\code\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\CommonWebModule.csproj.CopyComplete
-D:\zhaopeng\code\GitHubOrderManager\OrderManagement\CommonWebModule\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\CommonWebModule\bin\Debug\netcoreapp3.1\CommonWebModule.deps.json
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\CommonWebModule\bin\Debug\netcoreapp3.1\CommonWebModule.dll
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\CommonWebModule\bin\Debug\netcoreapp3.1\CommonWebModule.pdb
@@ -43,3 +42,4 @@ D:\zhaopeng\code\GitHubOrderManager\OrderManagement\CommonWebModule\obj\Debug\ne
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\staticwebassets\CommonWebModule.StaticWebAssets.xml
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\CommonWebModule.dll
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\CommonWebModule.pdb
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\CommonWebModule\obj\Debug\netcoreapp3.1\scopedcss\bundle\CommonWebModule.styles.css

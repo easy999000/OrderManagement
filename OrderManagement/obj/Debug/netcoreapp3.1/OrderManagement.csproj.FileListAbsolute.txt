@@ -440,7 +440,6 @@ D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagement\obj\Debug\ne
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagement\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagement\bin\Debug\netcoreapp3.1\appsettings.json
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagement\bin\Debug\netcoreapp3.1\config\sysConfig.json
-D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagement\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagement\bin\Debug\netcoreapp3.1\OrderManagement.exe
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagement\bin\Debug\netcoreapp3.1\OrderManagement.deps.json
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagement\bin\Debug\netcoreapp3.1\OrderManagement.runtimeconfig.json
@@ -866,3 +865,4 @@ D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagement\bin\Debug\ne
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagement\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Private.ServiceModel.dll
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagement\bin\Debug\netcoreapp3.1\BeetleX.Redis.dll
 D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagement\bin\Debug\netcoreapp3.1\BeetleX.Redis.pdb
+D:\zhaopeng\code\GitHubOrderManager\OrderManagement\OrderManagement\obj\Debug\netcoreapp3.1\scopedcss\bundle\OrderManagement.styles.css
